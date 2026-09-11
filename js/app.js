@@ -2175,52 +2175,270 @@ btnBorrarProgreso.addEventListener(
 
 actualizarEstadisticasPorTema();
 // ============================================================
-// ÍNDICE DE TEORÍA - CAMBIAR PÁGINA DEL PDF
+// LECTOR DE TEORÍA BADBEAR.MED
 // ============================================================
 
-const visorTeoria =
-  document.getElementById("visor-teoria");
+const paginaTeoria =
+  document.getElementById("pagina-teoria");
+
+const paginaActualTexto =
+  document.getElementById("pagina-actual");
+
+const totalPaginasTeoriaTexto =
+  document.getElementById("total-paginas-teoria");
+
+const btnPaginaAnterior =
+  document.getElementById("btn-pagina-anterior");
+
+const btnPaginaSiguiente =
+  document.getElementById("btn-pagina-siguiente");
 
 const botonesIndiceTeoria =
   document.querySelectorAll(".indice-tema");
 
-const rutaPDF =
-  "assets/docs/cirugia-pediatrica.pdf";
+
+const TOTAL_PAGINAS_TEORIA = 195;
+
+let paginaTeoriaActual = 1;
 
 
-botonesIndiceTeoria.forEach(boton => {
+// ============================================================
+// MOSTRAR UNA PÁGINA
+// ============================================================
 
-  boton.addEventListener("click", () => {
+function mostrarPaginaTeoria(numeroPagina) {
 
-    const pagina =
-      boton.getAttribute("data-page");
-
-
-    // Quitar el azul del botón anterior
-    botonesIndiceTeoria.forEach(item => {
-
-      item.classList.remove("activo");
-
-    });
+  numeroPagina = Number(numeroPagina);
 
 
-    // Marcar en azul el tema seleccionado
-    boton.classList.add("activo");
+  if (numeroPagina < 1) {
+    numeroPagina = 1;
+  }
 
 
-    // Vaciar temporalmente el visor
-    visorTeoria.src =
-      "about:blank";
+  if (numeroPagina > TOTAL_PAGINAS_TEORIA) {
+    numeroPagina = TOTAL_PAGINAS_TEORIA;
+  }
 
 
-    // Volver a cargar el PDF en la página elegida
-    setTimeout(() => {
+  paginaTeoriaActual =
+    numeroPagina;
 
-      visorTeoria.src =
-        `${rutaPDF}?v=${Date.now()}#page=${pagina}`;
 
-    }, 150);
+  const numeroArchivo =
+    String(numeroPagina).padStart(
+      3,
+      "0"
+    );
 
-  });
 
-});
+  paginaTeoria.src =
+    `assets/teoria/pagina-${numeroArchivo}.webp`;
+
+
+  paginaTeoria.alt =
+    `Página ${numeroPagina} de Cirugía Pediátrica`;
+
+
+  paginaActualTexto.textContent =
+    numeroPagina;
+
+
+  totalPaginasTeoriaTexto.textContent =
+    TOTAL_PAGINAS_TEORIA;
+
+
+  // Desactivar botones en los extremos
+
+  btnPaginaAnterior.disabled =
+    numeroPagina === 1;
+
+
+  btnPaginaSiguiente.disabled =
+    numeroPagina === TOTAL_PAGINAS_TEORIA;
+
+
+  // Volver arriba de la página
+
+  const visor =
+    document.querySelector(
+      ".visor-imagen-teoria"
+    );
+
+
+  if (visor) {
+
+    visor.scrollTop = 0;
+
+  }
+
+
+  actualizarTemaActivo(
+    numeroPagina
+  );
+
+}
+
+
+// ============================================================
+// BOTÓN ANTERIOR
+// ============================================================
+
+btnPaginaAnterior.addEventListener(
+  "click",
+  () => {
+
+    mostrarPaginaTeoria(
+      paginaTeoriaActual - 1
+    );
+
+  }
+);
+
+
+// ============================================================
+// BOTÓN SIGUIENTE
+// ============================================================
+
+btnPaginaSiguiente.addEventListener(
+  "click",
+  () => {
+
+    mostrarPaginaTeoria(
+      paginaTeoriaActual + 1
+    );
+
+  }
+);
+
+
+// ============================================================
+// ÍNDICE LATERAL
+// ============================================================
+
+botonesIndiceTeoria.forEach(
+  boton => {
+
+    boton.addEventListener(
+      "click",
+      () => {
+
+        const pagina =
+          Number(
+            boton.dataset.page
+          );
+
+
+        mostrarPaginaTeoria(
+          pagina
+        );
+
+      }
+    );
+
+  }
+);
+
+
+// ============================================================
+// MARCAR TEMA ACTIVO
+// ============================================================
+
+function actualizarTemaActivo(
+  pagina
+) {
+
+  let botonActivo = null;
+
+
+  botonesIndiceTeoria.forEach(
+    boton => {
+
+      const inicioTema =
+        Number(
+          boton.dataset.page
+        );
+
+
+      if (inicioTema <= pagina) {
+
+        botonActivo = boton;
+
+      }
+
+
+      boton.classList.remove(
+        "activo"
+      );
+
+    }
+  );
+
+
+  if (botonActivo) {
+
+    botonActivo.classList.add(
+      "activo"
+    );
+
+  }
+
+}
+
+
+// ============================================================
+// INICIAR LECTOR
+// ============================================================
+
+mostrarPaginaTeoria(1);
+// ============================================================
+// PROTECCIÓN VISUAL DE LA BIBLIOTECA BADBEAR.MED
+// ============================================================
+
+const visorImagenTeoria =
+  document.querySelector(".visor-imagen-teoria");
+
+
+// Bloquear clic derecho dentro del lector
+if (visorImagenTeoria) {
+
+  visorImagenTeoria.addEventListener(
+    "contextmenu",
+    (evento) => {
+
+      evento.preventDefault();
+
+    }
+  );
+
+}
+
+
+// Bloquear arrastre de la página
+if (paginaTeoria) {
+
+  paginaTeoria.addEventListener(
+    "dragstart",
+    (evento) => {
+
+      evento.preventDefault();
+
+    }
+  );
+
+}
+
+
+// Evitar selección accidental de la página
+if (visorImagenTeoria) {
+
+  visorImagenTeoria.addEventListener(
+    "selectstart",
+    (evento) => {
+
+      evento.preventDefault();
+
+    }
+  );
+
+}

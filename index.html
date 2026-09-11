@@ -746,24 +746,93 @@
 
       <div class="visor-pdf">
 
-        <div
-          class="marcas-agua-pdf"
-          aria-hidden="true"
-        >
+        <div class="lector-teoria">
 
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
+  <!-- ==========================================
+       CONTROLES DEL LECTOR
+  =========================================== -->
 
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
+  <div class="lector-controles">
 
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
-          <span>BADBEAR.MED</span>
+    <button
+      id="btn-pagina-anterior"
+      class="lector-boton"
+      type="button"
+    >
+      ← Anterior
+    </button>
 
-        </div>
+
+    <div class="lector-paginacion">
+
+      Página
+
+      <strong id="pagina-actual">
+        1
+      </strong>
+
+      de
+
+      <strong id="total-paginas-teoria">
+        300
+      </strong>
+
+    </div>
+
+
+    <button
+      id="btn-pagina-siguiente"
+      class="lector-boton"
+      type="button"
+    >
+      Siguiente →
+    </button>
+
+  </div>
+
+
+
+  <!-- ==========================================
+       VISOR
+  =========================================== -->
+
+  <div class="visor-imagen-teoria">
+
+
+    <!-- MARCAS DE AGUA -->
+
+    <div
+      class="marcas-agua-pdf"
+      aria-hidden="true"
+    >
+
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+      <span>BADBEAR.MED</span>
+
+    </div>
+
+
+    <!-- PÁGINA DEL LIBRO -->
+
+    <img
+      id="pagina-teoria"
+      src="assets/teoria/pagina-001.webp"
+      alt="Página 1 de Cirugía Pediátrica"
+      draggable="false"
+    >
+
+  </div>
+
+</div>
 
 
         <iframe

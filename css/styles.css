@@ -2311,3 +2311,208 @@ button {
   }
 
 }
+/* ==========================================================
+   LECTOR DE TEORÍA BADBEAR.MED
+========================================================== */
+
+.lector-teoria {
+  width: 100%;
+  min-width: 0;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* ==========================================================
+   CONTROLES SUPERIORES
+========================================================== */
+
+.lector-controles {
+  width: 100%;
+
+  padding: 12px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  background: #101828;
+
+  color: white;
+}
+
+
+.lector-boton {
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  background: #245cff;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.lector-boton:hover {
+  background: #1747d1;
+}
+
+
+.lector-paginacion {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #eaecf0;
+}
+
+
+.lector-paginacion strong {
+  color: white;
+
+  font-size: 15px;
+}
+
+
+/* ==========================================================
+   VISOR DE LA PÁGINA
+========================================================== */
+
+.visor-imagen-teoria {
+  position: relative;
+
+  width: 100%;
+
+  height: calc(100vh - 290px);
+  min-height: 650px;
+
+  overflow: auto;
+
+  padding: 25px;
+
+  background: #252525;
+}
+
+
+/* ==========================================================
+   IMAGEN DE LA PÁGINA
+========================================================== */
+
+#pagina-teoria {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+
+  height: auto;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 1;
+
+  box-shadow:
+    0 6px 25px rgba(0, 0, 0, 0.35);
+
+  user-select: none;
+}
+
+
+/* ==========================================================
+   MARCAS DE AGUA SOBRE LA PÁGINA
+========================================================== */
+
+.visor-imagen-teoria .marcas-agua-pdf {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  align-items: center;
+  justify-items: center;
+}
+
+
+.visor-imagen-teoria
+.marcas-agua-pdf span {
+
+  font-size: 30px;
+
+  font-weight: 900;
+
+  color:
+    rgba(13, 27, 61, 0.10);
+
+  transform:
+    rotate(-28deg);
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   CELULAR
+========================================================== */
+
+@media (max-width: 700px) {
+
+  .lector-controles {
+    padding: 10px;
+
+    gap: 8px;
+  }
+
+
+  .lector-boton {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+
+  .lector-paginacion {
+    font-size: 11px;
+  }
+
+
+  .visor-imagen-teoria {
+    height: 72vh;
+
+    min-height: 500px;
+
+    padding: 10px;
+  }
+
+
+  .visor-imagen-teoria
+  .marcas-agua-pdf span {
+
+    font-size: 17px;
+  }
+
+}
