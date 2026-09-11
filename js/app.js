@@ -2197,7 +2197,7 @@ const botonesIndiceTeoria =
   document.querySelectorAll(".indice-tema");
 
 
-const TOTAL_PAGINAS_TEORIA = 195;
+const TOTAL_PAGINAS_TEORIA = 300;
 
 let paginaTeoriaActual = 1;
 
