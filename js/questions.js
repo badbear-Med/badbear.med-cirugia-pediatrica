@@ -4372,13 +4372,1835 @@ const questions5 = [
   }
 
 ];
-const questions6 = [
+
+const questions7 = [
+
+  // =========================================================
+  // CASOS CLÍNICOS TIPO ENAM
+  // PREGUNTAS 301–325
+  // =========================================================
+
+
+  // =========================================================
+  // ATRESIA ESOFÁGICA Y FÍSTULA TRAQUEOESOFÁGICA
+  // =========================================================
+
+  {
+    id: 301,
+    tema: "Atresia esofágica y FTE",
+    dificultad: "Alta",
+    pregunta: "Recién nacido de 6 horas de vida, producto de gestación con polihidramnios, presenta sialorrea abundante, tos y cianosis durante el primer intento de lactancia. En emergencia se intenta colocar una sonda orogástrica, pero esta no progresa. La radiografía muestra la sonda enrollada en el esófago proximal. ¿Cuál es la conducta inicial más adecuada?",
+    opciones: [
+      "Iniciar fórmula por sonda nasogástrica",
+      "Realizar cirugía inmediatamente sin estabilización previa",
+      "Suspender vía oral, aspirar continuamente el fondo de saco y estabilizar al recién nacido",
+      "Realizar enema contrastado",
+      "Administrar procinéticos y observar evolución"
+    ],
+    correcta: 2,
+    explicacion: "El cuadro es compatible con atresia esofágica. Antes de la reparación quirúrgica debe evitarse la alimentación oral, aspirarse continuamente el fondo de saco proximal y estabilizar al recién nacido para disminuir el riesgo de aspiración.",
+    fija: "Sialorrea + sonda que no pasa = sospecha atresia esofágica. Primero NPO + aspiración + estabilización."
+  },
+
+  {
+    id: 302,
+    tema: "Atresia esofágica y FTE",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con atresia esofágica confirmada presenta marcada distensión abdominal. La radiografía muestra la sonda detenida en el fondo de saco proximal y abundante aire en estómago e intestino. ¿Qué variante anatómica explica mejor estos hallazgos?",
+    opciones: [
+      "Atresia esofágica pura sin fístula",
+      "Atresia esofágica con fístula traqueoesofágica distal",
+      "Fístula traqueoesofágica en H aislada",
+      "Atresia esofágica con fístula proximal exclusivamente",
+      "Estenosis congénita del esófago"
+    ],
+    correcta: 1,
+    explicacion: "El aire pasa desde la tráquea hacia el esófago distal, estómago e intestino a través de una fístula distal. Esta es además la configuración anatómica más frecuente.",
+    fija: "Atresia + aire abdominal = FTE distal."
+  },
+
+  {
+    id: 303,
+    tema: "Atresia esofágica y FTE",
+    dificultad: "Alta",
+    pregunta: "Recién nacido operado por atresia esofágica evoluciona inicialmente estable. Al quinto día postoperatorio presenta deterioro clínico y se sospecha pérdida de integridad de la anastomosis. ¿Qué estudio permite evaluar directamente una posible fuga anastomótica?",
+    opciones: [
+      "Ecografía abdominal",
+      "Tomografía cerebral",
+      "Radiografía de pelvis",
+      "Esofagograma",
+      "Colon por enema"
+    ],
+    correcta: 3,
+    explicacion: "Ante sospecha de fuga o dehiscencia de la anastomosis puede realizarse un esofagograma, mencionado en el material aproximadamente entre el cuarto y sexto día postoperatorio.",
+    fija: "Postoperatorio de atresia esofágica + sospecha de fuga = esofagograma."
+  },
+
+  {
+    id: 304,
+    tema: "Atresia esofágica y FTE",
+    dificultad: "Alta",
+    pregunta: "Un recién nacido con atresia esofágica es llevado a cirugía. Durante la evaluación se determina que existe una separación importante, mayor de aproximadamente 2 cm, entre ambos cabos esofágicos y no es posible realizar una anastomosis primaria segura. ¿Cuál es la estrategia más apropiada según el esquema del curso?",
+    opciones: [
+      "Cerrar ambos cabos y comenzar alimentación oral",
+      "Realizar piloromiotomía",
+      "Realizar únicamente toracocentesis",
+      "Efectuar anastomosis bajo máxima tensión",
+      "Realizar gastrostomía y planificar reconstrucción esofágica diferida"
+    ],
+    correcta: 4,
+    explicacion: "Cuando existe una separación importante entre los cabos y no puede efectuarse una reconstrucción inmediata segura, la gastrostomía permite mantener nutrición enteral mientras se planifica una reconstrucción diferida.",
+    fija: "Cabos próximos: anastomosis primaria. Long gap: gastrostomía + reconstrucción diferida."
+  },
+
+  {
+    id: 305,
+    tema: "Atresia esofágica y FTE",
+    dificultad: "Alta",
+    pregunta: "Lactante de 2 meses presenta desde el nacimiento episodios repetidos de tos, ahogamiento y cianosis durante la alimentación, asociados a infecciones respiratorias recurrentes. Una sonda orogástrica progresa normalmente hasta el estómago. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Fístula traqueoesofágica tipo H",
+      "Atresia esofágica pura",
+      "Atresia duodenal",
+      "Estenosis hipertrófica del píloro",
+      "Invaginación intestinal"
+    ],
+    correcta: 0,
+    explicacion: "En la fístula tipo H existe comunicación entre tráquea y esófago, pero no hay atresia; por ello la sonda puede llegar normalmente al estómago. Son típicos los síntomas respiratorios asociados con la alimentación.",
+    fija: "Tos/cianosis al comer + esófago permeable = pensar en fístula en H."
+  },
+
+
+  // =========================================================
+  // ATRESIA DUODENAL
+  // =========================================================
+
+  {
+    id: 306,
+    tema: "Atresia duodenal",
+    dificultad: "Alta",
+    pregunta: "Recién nacido de 12 horas de vida con rasgos compatibles con síndrome de Down presenta vómitos precoces y distensión predominante en epigastrio. La radiografía abdominal evidencia signo de doble burbuja. El paciente está deshidratado. ¿Cuál es la conducta inmediata más adecuada?",
+    opciones: [
+      "Duodenoduodenostomía inmediata sin preparación",
+      "Iniciar alimentación oral fraccionada",
+      "Suspender vía oral, colocar sonda nasogástrica, hidratar y corregir alteraciones hidroelectrolíticas",
+      "Realizar enema neumático",
+      "Administrar metoclopramida"
+    ],
+    correcta: 2,
+    explicacion: "La atresia duodenal requiere tratamiento quirúrgico, pero primero se realiza estabilización preoperatoria con NPO, descompresión nasogástrica, hidratación y corrección hidroelectrolítica.",
+    fija: "Doble burbuja = atresia duodenal. Primero estabilizar; después operar."
+  },
+
+  {
+    id: 307,
+    tema: "Atresia duodenal",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta vómitos desde las primeras horas de vida. La radiografía simple de abdomen muestra dos grandes cámaras aéreas correspondientes al estómago y duodeno proximal, sin progresión significativa de gas hacia intestino distal. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Atresia yeyunal",
+      "Íleo meconial",
+      "Enfermedad de Hirschsprung",
+      "Malrotación intestinal",
+      "Atresia duodenal"
+    ],
+    correcta: 4,
+    explicacion: "La denominada doble burbuja corresponde a la distensión del estómago y del duodeno proximal por una obstrucción duodenal.",
+    fija: "Dos burbujas: estómago + duodeno proximal = atresia duodenal."
+  },
+
+  {
+    id: 308,
+    tema: "Atresia duodenal",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con diagnóstico de atresia duodenal ha sido adecuadamente hidratado, se corrigieron sus alteraciones electrolíticas y se descartaron condiciones que contraindiquen cirugía. ¿Cuál es el procedimiento quirúrgico definitivo esperado?",
+    opciones: [
+      "Piloromiotomía de Ramstedt",
+      "Duodenoduodenostomía",
+      "Anorrectoplastia sagital posterior",
+      "Apendicectomía",
+      "Funduplicatura"
+    ],
+    correcta: 1,
+    explicacion: "Una vez estabilizado el recién nacido, el tratamiento definitivo de la atresia duodenal consiste en restablecer el tránsito mediante una duodenoduodenostomía.",
+    fija: "Atresia duodenal: estabilización primero → duodenoduodenostomía después."
+  },
+
+  {
+    id: 309,
+    tema: "Atresia duodenal",
+    dificultad: "Alta",
+    pregunta: "Gestante con polihidramnios da a luz a un recién nacido con fenotipo compatible con trisomía 21. Durante las primeras horas el neonato presenta vómitos persistentes y la radiografía demuestra una doble burbuja. ¿Qué asociación debe considerarse especialmente en este paciente?",
+    opciones: [
+      "Síndrome de Turner",
+      "Síndrome nefrótico",
+      "Fibrosis quística",
+      "Síndrome de Down",
+      "Neurofibromatosis"
+    ],
+    correcta: 3,
+    explicacion: "La atresia duodenal presenta una asociación clásica con síndrome de Down, mencionada en el material aproximadamente en 20–30 % de los pacientes.",
+    fija: "Atresia duodenal ↔ síndrome de Down."
+  },
+
+  {
+    id: 310,
+    tema: "Atresia duodenal",
+    dificultad: "Alta",
+    pregunta: "Un recién nacido atendido en emergencia presenta vómitos precoces y se sospecha una obstrucción intestinal congénita alta. Se encuentra hemodinámicamente estable. ¿Cuál es el examen inicial más apropiado para orientar el nivel de la obstrucción?",
+    opciones: [
+      "Radiografía simple de abdomen",
+      "Tomografía abdominal con contraste",
+      "Resonancia magnética abdominal",
+      "Colonoscopía",
+      "Gammagrafía"
+    ],
+    correcta: 0,
+    explicacion: "En una sospecha de obstrucción intestinal neonatal el estudio inicial fundamental es la radiografía simple de abdomen. Permite reconocer distensión, niveles hidroaéreos y signos clásicos como la doble burbuja.",
+    fija: "Obstrucción intestinal neonatal: empieza con radiografía simple."
+  },
+
+
+  // =========================================================
+  // ATRESIA YEYUNOILEAL
+  // =========================================================
+
+  {
+    id: 311,
+    tema: "Atresia yeyunoileal",
+    dificultad: "Alta",
+    pregunta: "Recién nacido de 1 día de vida presenta vómitos biliosos progresivos y marcada distensión abdominal. La radiografía muestra múltiples asas intestinales dilatadas, numerosos niveles hidroaéreos y ausencia de gas en colon. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Estenosis hipertrófica del píloro",
+      "Atresia esofágica",
+      "Atresia duodenal",
+      "Atresia yeyunoileal",
+      "Hernia inguinal"
+    ],
+    correcta: 3,
+    explicacion: "Una obstrucción neonatal de intestino delgado más distal produce distensión, múltiples asas dilatadas y varios niveles hidroaéreos, con ausencia de gas distal.",
+    fija: "RN + vómitos biliosos + múltiples niveles hidroaéreos = atresia yeyunoileal."
+  },
+
+  {
+    id: 312,
+    tema: "Atresia yeyunoileal",
+    dificultad: "Alta",
+    pregunta: "Se evalúan dos recién nacidos con atresia de intestino delgado. El primero presenta pocos niveles hidroaéreos y el segundo presenta numerosas asas dilatadas y múltiples niveles hidroaéreos. ¿Qué interpretación es más probable en el segundo paciente?",
+    opciones: [
+      "La obstrucción es más proximal",
+      "La obstrucción probablemente es más distal, a nivel ileal",
+      "No existe obstrucción intestinal",
+      "Presenta una lesión esofágica",
+      "El hallazgo confirma estenosis pilórica"
+    ],
+    correcta: 1,
+    explicacion: "Cuanto más distal se encuentra la obstrucción del intestino delgado, mayor cantidad de asas puede distenderse y mayor número de niveles hidroaéreos puede observarse.",
+    fija: "Más niveles hidroaéreos = obstrucción más distal."
+  },
+
+  {
+    id: 313,
+    tema: "Atresia yeyunoileal",
+    dificultad: "Alta",
+    pregunta: "Durante una laparotomía neonatal por obstrucción intestinal se encuentra atresia yeyunoileal con gran defecto mesentérico y el intestino distal enrollado alrededor de su irrigación, adoptando una configuración descrita como 'cáscara de manzana'. ¿A qué tipo corresponde?",
+    opciones: [
+      "Tipo I",
+      "Tipo II",
+      "Tipo IIIA",
+      "Tipo IV",
+      "Tipo IIIB"
+    ],
+    correcta: 4,
+    explicacion: "La configuración en cáscara de manzana o árbol de Navidad es característica de la atresia yeyunoileal tipo IIIB.",
+    fija: "Cáscara de manzana = atresia yeyunoileal tipo IIIB."
+  },
+
+  {
+    id: 314,
+    tema: "Atresia yeyunoileal",
+    dificultad: "Alta",
+    pregunta: "En un recién nacido con obstrucción intestinal, la exploración quirúrgica identifica varios segmentos atrésicos separados a lo largo del intestino delgado. ¿Cuál es la clasificación correspondiente?",
+    opciones: [
+      "Tipo I",
+      "Tipo IIIA",
+      "Tipo IV",
+      "Tipo II",
+      "Tipo IIIB"
+    ],
+    correcta: 2,
+    explicacion: "El tipo IV se caracteriza por la presencia de múltiples atresias. Puede comprometer una longitud intestinal importante y condicionar problemas relacionados con la cantidad de intestino remanente.",
+    fija: "Atresias múltiples = tipo IV."
+  },
+
+  {
+    id: 315,
+    tema: "Atresia yeyunoileal",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con vómitos biliosos, distensión abdominal y radiografía compatible con atresia yeyunoileal presenta signos de deshidratación. ¿Cuál debe ser el manejo inicial antes de la cirugía?",
+    opciones: [
+      "Nada por vía oral, descompresión nasogástrica y reposición hidroelectrolítica",
+      "Alimentación oral precoz para estimular el peristaltismo",
+      "Enema neumático como primera elección",
+      "Piloromiotomía de urgencia",
+      "Alta con vigilancia domiciliaria"
+    ],
+    correcta: 0,
+    explicacion: "El paciente con obstrucción intestinal neonatal debe estabilizarse: NPO, descompresión gastrointestinal y corrección de la deshidratación y alteraciones hidroelectrolíticas antes del tratamiento quirúrgico.",
+    fija: "Obstrucción neonatal: NPO + SNG + líquidos/electrolitos antes de cirugía."
+  },
+
+
+  // =========================================================
+  // MALFORMACIONES ANORRECTALES
+  // =========================================================
+
+  {
+    id: 316,
+    tema: "Malformaciones anorrectales",
+    dificultad: "Alta",
+    pregunta: "Recién nacido varón es evaluado porque no se identifica orificio anal normal. Durante las primeras horas de vida se observa material compatible con meconio mezclado con la orina. ¿Qué anomalía debe sospecharse?",
+    opciones: [
+      "Fístula rectocutánea baja",
+      "Estenosis pilórica",
+      "Atresia duodenal",
+      "Hernia umbilical",
+      "Malformación anorrectal con fístula rectourinaria"
+    ],
+    correcta: 4,
+    explicacion: "La presencia de meconio en la orina indica comunicación entre el recto y la vía urinaria, característica de una malformación anorrectal con fístula rectourinaria.",
+    fija: "Ano imperforado + meconio en orina = fístula rectourinaria."
+  },
+
+  {
+    id: 317,
+    tema: "Malformaciones anorrectales",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con malformación anorrectal es estudiado y se determina que el fondo de saco rectal se encuentra alto con respecto al complejo muscular. ¿Cuál es el esquema terapéutico señalado para este tipo de lesión?",
+    opciones: [
+      "Corrección perineal en un solo tiempo en todos los casos",
+      "Colostomía, anorrectoplastia sagital posterior y posteriormente cierre de colostomía",
+      "Tratamiento conservador hasta los 5 años",
+      "Piloromiotomía y cierre primario",
+      "Solo dilataciones anales desde el nacimiento"
+    ],
+    correcta: 1,
+    explicacion: "Las malformaciones anorrectales altas se manejan según el esquema del curso en tres tiempos: colostomía, anorrectoplastia sagital posterior y finalmente restitución del tránsito mediante cierre de colostomía.",
+    fija: "MAR alta = 3 tiempos."
+  },
+
+  {
+    id: 318,
+    tema: "Malformaciones anorrectales",
+    dificultad: "Alta",
+    pregunta: "Recién nacido estable presenta una malformación anorrectal baja con trayecto fistuloso perineal y sin datos de obstrucción proximal complicada. ¿Cuál es la estrategia quirúrgica esperada según el esquema estudiado?",
+    opciones: [
+      "Colostomía obligatoria seguida de dos cirugías adicionales",
+      "Observación hasta la adolescencia",
+      "Gastrostomía",
+      "Corrección en un solo tiempo mediante abordaje tipo Mini-Peña",
+      "Duodenoduodenostomía"
+    ],
+    correcta: 3,
+    explicacion: "Las malformaciones bajas pueden corregirse directamente en un solo tiempo, utilizando un abordaje perineal tipo Mini-Peña dentro del esquema del material.",
+    fija: "MAR baja = 1 tiempo."
+  },
+
+  {
+    id: 319,
+    tema: "Malformaciones anorrectales",
+    dificultad: "Alta",
+    pregunta: "Niño con malformación anorrectal alta fue sometido previamente a colostomía y posteriormente a anorrectoplastia sagital posterior. Antes de programar el cierre de la colostomía, ¿qué medida es fundamental?",
+    opciones: [
+      "Suspender toda evaluación del neoano",
+      "Realizar apendicectomía profiláctica",
+      "Realizar dilataciones anales y comprobar adecuada permeabilidad del neoano",
+      "Realizar piloromiotomía",
+      "Mantener la colostomía permanentemente en todos los pacientes"
+    ],
+    correcta: 2,
+    explicacion: "Las dilataciones con Hegar ayudan a prevenir estenosis del neoano. Antes de cerrar la colostomía debe comprobarse que el nuevo canal anal permanece permeable.",
+    fija: "Después de Peña: dilataciones con Hegar antes de cerrar la colostomía."
+  },
+
+  {
+    id: 320,
+    tema: "Malformaciones anorrectales",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con ano imperforado es estudiado para determinar el nivel de la malformación. La evaluación muestra que el fondo de saco rectal se encuentra aproximadamente a 0.5 cm del periné. ¿Cómo se clasifica esta lesión según el esquema del curso?",
+    opciones: [
+      "Malformación anorrectal baja",
+      "Malformación anorrectal alta",
+      "Atresia duodenal",
+      "Fístula traqueoesofágica",
+      "Atresia ileal tipo IV"
+    ],
+    correcta: 0,
+    explicacion: "En el esquema estudiado, una distancia menor de aproximadamente 1 cm entre el fondo de saco rectal y el periné orienta a una malformación baja.",
+    fija: "Fondo de saco cercano al periné (<1 cm) = MAR baja."
+  },
+
+
+  // =========================================================
+  // ESTENOSIS HIPERTRÓFICA DEL PÍLORO
+  // =========================================================
+
+  {
+    id: 321,
+    tema: "Estenosis hipertrófica del píloro",
+    dificultad: "Alta",
+    pregunta: "Lactante varón primogénito de 3 semanas es llevado a emergencia por vómitos postprandiales progresivos, no biliosos y en proyectil. Después de cada episodio busca nuevamente el pecho con avidez. Al examen se palpa una pequeña masa ovalada en epigastrio. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Atresia duodenal",
+      "Invaginación intestinal",
+      "Estenosis hipertrófica del píloro",
+      "Apendicitis aguda",
+      "Atresia esofágica"
+    ],
+    correcta: 2,
+    explicacion: "La edad, el sexo masculino, la condición de primogénito, el vómito postprandial en proyectil, el hambre posterior y la oliva pilórica constituyen el cuadro clásico de estenosis hipertrófica del píloro.",
+    fija: "3 semanas + proyectil + hambre posterior + oliva = EHP."
+  },
+
+  {
+    id: 322,
+    tema: "Estenosis hipertrófica del píloro",
+    dificultad: "Alta",
+    pregunta: "Lactante de 4 semanas con vómitos en proyectil presenta mucosas secas, llenado capilar prolongado y pérdida de peso. Laboratorio: Cl− 87 mEq/L y HCO3− 35 mEq/L. La ecografía confirma estenosis hipertrófica del píloro. ¿Cuál es la siguiente conducta más adecuada?",
+    opciones: [
+      "Ingresar inmediatamente a sala de operaciones sin tratamiento previo",
+      "Iniciar alimentación oral abundante",
+      "Realizar enema neumático",
+      "Administrar únicamente antibióticos",
+      "Corregir primero la deshidratación y las alteraciones hidroelectrolíticas"
+    ],
+    correcta: 4,
+    explicacion: "La EHP es una urgencia quirúrgica, pero no debe operarse a un lactante deshidratado y con trastornos electrolíticos. Primero se realiza corrección hidroelectrolítica y luego la cirugía.",
+    fija: "EHP: no operar deshidratado. Primero corregir; después Ramstedt."
+  },
+
+  {
+    id: 323,
+    tema: "Estenosis hipertrófica del píloro",
+    dificultad: "Alta",
+    pregunta: "Lactante de 3 semanas presenta vómitos postprandiales en proyectil y pérdida progresiva de peso. ¿Qué estudio y hallazgo serían los más apropiados para confirmar la sospecha diagnóstica?",
+    opciones: [
+      "Radiografía de tórax con asas intestinales intratorácicas",
+      "Ecografía abdominal con hipertrofia y elongación del canal pilórico",
+      "Radiografía abdominal con doble burbuja",
+      "Ecografía con signo de diana ileocólica",
+      "Esofagograma con fondo de saco proximal"
+    ],
+    correcta: 1,
+    explicacion: "La ecografía abdominal es el examen principal en la EHP y permite demostrar hipertrofia muscular, estrechamiento y elongación del canal pilórico.",
+    fija: "EHP: examen de elección = ecografía."
+  },
+
+  {
+    id: 324,
+    tema: "Estenosis hipertrófica del píloro",
+    dificultad: "Alta",
+    pregunta: "Lactante con estenosis hipertrófica del píloro permanece hospitalizado durante 24 horas para corregir deshidratación y alteraciones electrolíticas. Una vez estabilizado, ¿qué tratamiento definitivo debe realizarse?",
+    opciones: [
+      "Duodenoduodenostomía",
+      "Anorrectoplastia sagital posterior",
+      "Resección intestinal amplia",
+      "Piloromiotomía de Ramstedt",
+      "Funduplicatura de Nissen"
+    ],
+    correcta: 3,
+    explicacion: "El tratamiento quirúrgico definitivo es la piloromiotomía de Ramstedt, que divide la musculatura pilórica hipertrofiada sin lesionar la mucosa.",
+    fija: "EHP = piloromiotomía de Ramstedt. NO piloromioplastia."
+  },
+
+  {
+    id: 325,
+    tema: "Estenosis hipertrófica del píloro",
+    dificultad: "Alta",
+    pregunta: "Lactante de 4 semanas presenta vómitos repetidos en proyectil durante varios días. Se encuentra deshidratado y con pérdida de peso. ¿Qué alteración ácido-base y electrolítica es la más característica del cuadro según el material estudiado?",
+    opciones: [
+      "Alcalosis metabólica hipoclorémica",
+      "Acidosis metabólica hiperclorémica",
+      "Acidosis respiratoria",
+      "Alcalosis respiratoria aislada",
+      "Acidosis láctica con hiperpotasemia obligatoria"
+    ],
+    correcta: 0,
+    explicacion: "Los vómitos gástricos persistentes producen pérdida de ácido clorhídrico y cloro, generando el patrón clásico de alcalosis metabólica hipoclorémica.",
+    fija: "Vómitos persistentes en EHP = alcalosis metabólica hipoclorémica."
+  }
+
+];
+const questions8 = [
+
+  // =========================================================
+  // CASOS CLÍNICOS TIPO ENAM
+  // PREGUNTAS 326–350
+  // =========================================================
+
+
+  // =========================================================
+  // INVAGINACIÓN INTESTINAL
+  // =========================================================
+
+  {
+    id: 326,
+    tema: "Invaginación intestinal",
+    dificultad: "Alta",
+    pregunta: "Lactante varón de 5 meses, previamente sano, es llevado a emergencia porque desde hace 4 horas presenta episodios súbitos de llanto intenso durante los cuales flexiona las piernas sobre el abdomen. Entre los episodios permanece relativamente tranquilo. Posteriormente presenta vómitos. Al examen se palpa una masa alargada en abdomen superior derecho. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Estenosis hipertrófica del píloro",
+      "Invaginación intestinal",
+      "Apendicitis aguda",
+      "Atresia duodenal",
+      "Hernia inguinal encarcelada"
+    ],
+    correcta: 1,
+    explicacion: "La edad típica, el comienzo brusco, el dolor abdominal paroxístico con flexión de las piernas, los vómitos y la masa en salchicha constituyen un patrón clásico de invaginación intestinal.",
+    fija: "3–7 meses + dolor paroxístico + piernas al abdomen + masa en salchicha = INVAGINACIÓN."
+  },
+
+  {
+    id: 327,
+    tema: "Invaginación intestinal",
+    dificultad: "Alta",
+    pregunta: "Lactante de 6 meses llega a emergencia 8 horas después del inicio de dolor abdominal intermitente y vómitos. Está hemodinámicamente estable, no presenta signos peritoneales y la ecografía muestra una imagen en escarapela. ¿Cuál es el tratamiento inicial más apropiado?",
+    opciones: [
+      "Laparotomía obligatoria en todos los casos",
+      "Piloromiotomía",
+      "Reducción no quirúrgica mediante enema de aire o contraste",
+      "Apendicectomía",
+      "Observación domiciliaria"
+    ],
+    correcta: 2,
+    explicacion: "En una invaginación de pocas horas de evolución, sin perforación, necrosis ni signos peritoneales, puede intentarse reducción no quirúrgica mediante enema.",
+    fija: "Invaginación temprana no complicada = intentar reducción con enema."
+  },
+
+  {
+    id: 328,
+    tema: "Invaginación intestinal",
+    dificultad: "Alta",
+    pregunta: "Lactante de 7 meses presenta dolor abdominal de 30 horas de evolución, distensión, fiebre, deposiciones sanguinolentas y defensa abdominal generalizada. La radiografía muestra neumoperitoneo. ¿Cuál es la conducta más adecuada?",
+    opciones: [
+      "Enema neumático inmediato",
+      "Alta con control en 24 horas",
+      "Administrar solo analgésicos",
+      "Tratamiento quirúrgico",
+      "Iniciar alimentación oral"
+    ],
+    correcta: 3,
+    explicacion: "La presencia de signos peritoneales y neumoperitoneo indica enfermedad complicada con posible necrosis o perforación. En este escenario no debe realizarse enema y corresponde tratamiento quirúrgico.",
+    fija: "Peritonitis, necrosis, perforación o neumoperitoneo = NO ENEMA → CIRUGÍA."
+  },
+
+  {
+    id: 329,
+    tema: "Invaginación intestinal",
+    dificultad: "Alta",
+    pregunta: "Niño de 6 años presenta su segundo episodio de invaginación intestinal. A diferencia de la presentación típica del lactante, el cirujano considera probable la existencia de una lesión anatómica desencadenante. ¿Cuál de las siguientes debe buscarse como punto guía?",
+    opciones: [
+      "Divertículo de Meckel",
+      "Estenosis hipertrófica del píloro",
+      "Hidrocele",
+      "Hernia umbilical",
+      "Atresia esofágica"
+    ],
+    correcta: 0,
+    explicacion: "En niños mayores o con invaginaciones recurrentes debe buscarse un punto guía anatómico. Entre los señalados se encuentran divertículo de Meckel, pólipos, linfoma, duplicaciones intestinales y apéndice.",
+    fija: "Invaginación en niño mayor o recurrente = buscar PUNTO GUÍA."
+  },
+
+  {
+    id: 330,
+    tema: "Invaginación intestinal",
+    dificultad: "Alta",
+    pregunta: "Durante una laparotomía por invaginación intestinal complicada se logra desinvaginar el segmento afectado, pero se observa un tramo de intestino necrótico y no viable. ¿Cuál es la conducta quirúrgica más apropiada?",
+    opciones: [
+      "Dejar el intestino necrótico y observar",
+      "Realizar solo apendicectomía",
+      "Cerrar abdomen sin tratamiento adicional",
+      "Realizar gastrostomía",
+      "Resecar el segmento comprometido y realizar anastomosis término-terminal"
+    ],
+    correcta: 4,
+    explicacion: "Cuando el intestino está viable puede conservarse después de la reducción. Si existe necrosis, corresponde resección del segmento afectado y reconstrucción del tránsito intestinal.",
+    fija: "Invaginación + intestino necrótico = resección + anastomosis término-terminal."
+  },
+
+
+  // =========================================================
+  // ÓNFALOCELE Y GASTROSQUISIS
+  // =========================================================
+
+  {
+    id: 331,
+    tema: "Ónfalocele y gastrosquisis",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta al nacimiento una masa central en la región umbilical que contiene asas intestinales cubiertas por una membrana. El cordón umbilical se inserta directamente sobre el saco. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Gastrosquisis",
+      "Hernia umbilical simple",
+      "Ónfalocele",
+      "Hernia inguinal",
+      "Extrofia vesical"
+    ],
+    correcta: 2,
+    explicacion: "El ónfalocele emerge por el anillo umbilical, posee saco o membrana y el cordón umbilical se inserta en dicho saco.",
+    fija: "Anillo umbilical + saco + cordón insertado en saco = ÓNFALOCELE."
+  },
+
+  {
+    id: 332,
+    tema: "Ónfalocele y gastrosquisis",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta asas intestinales expuestas directamente al exterior, edematosas y cubiertas de fibrina. El defecto se encuentra a la derecha del cordón umbilical, cuya inserción es normal. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Ónfalocele intacto",
+      "Hernia umbilical",
+      "Gastrosquisis",
+      "Hernia diafragmática",
+      "Malformación anorrectal"
+    ],
+    correcta: 2,
+    explicacion: "La gastrosquisis se caracteriza por un defecto lateral, típicamente a la derecha del cordón, ausencia de saco y exposición directa de las asas intestinales.",
+    fija: "Derecha del cordón + SIN saco + intestino expuesto = GASTROSQUISIS."
+  },
+
+  {
+    id: 333,
+    tema: "Ónfalocele y gastrosquisis",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con ónfalocele de aproximadamente 3 cm es llevado a sala de operaciones. Durante la reducción, las vísceras ingresan fácilmente a la cavidad abdominal y no se produce deterioro respiratorio ni hemodinámico. ¿Cuál es el tratamiento más apropiado?",
+    opciones: [
+      "Mantener las vísceras permanentemente fuera del abdomen",
+      "Reducción y cierre primario",
+      "Silo obligatorio durante varias semanas",
+      "Resección de todas las asas exteriorizadas",
+      "Solo cubrir con gasas y dar de alta"
+    ],
+    correcta: 1,
+    explicacion: "Cuando el defecto permite reducir las vísceras sin compromiso fisiológico, puede realizarse reducción y cierre primario.",
+    fija: "Defecto pequeño + reducción tolerada = CIERRE PRIMARIO."
+  },
+
+  {
+    id: 334,
+    tema: "Ónfalocele y gastrosquisis",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con gran defecto de pared abdominal y cavidad abdominal pequeña presenta deterioro ventilatorio cuando se intenta introducir todo el contenido herniado. ¿Cuál es la conducta más adecuada?",
+    opciones: [
+      "Forzar el cierre abdominal inmediatamente",
+      "Resecar intestino sano para ganar espacio",
+      "Utilizar un silo con reducción progresiva y cierre posterior",
+      "Realizar piloromiotomía",
+      "No realizar ninguna protección de las vísceras"
+    ],
+    correcta: 2,
+    explicacion: "Cuando el contenido no puede reducirse de manera segura debido a una cavidad abdominal pequeña, no debe forzarse el cierre. Se utiliza un silo para realizar reducción gradual.",
+    fija: "No tolera reducción → NO forzar cierre → SILO."
+  },
+
+  {
+    id: 335,
+    tema: "Ónfalocele y gastrosquisis",
+    dificultad: "Alta",
+    pregunta: "En sala de partos se observa un recién nacido con asas intestinales expuestas y sin una membrana claramente visible. Sin embargo, al examinar cuidadosamente se constata que el defecto emerge directamente desde el anillo umbilical y no a la derecha del cordón. ¿Qué diagnóstico debe considerarse?",
+    opciones: [
+      "Gastrosquisis típica",
+      "Ónfalocele roto",
+      "Hernia inguinal",
+      "Hidrocele",
+      "Atresia yeyunal"
+    ],
+    correcta: 1,
+    explicacion: "La ausencia aparente de membrana puede hacer confundir un ónfalocele roto con gastrosquisis. La localización del defecto es fundamental: si emerge por el anillo umbilical debe considerarse ónfalocele roto.",
+    fija: "Ónfalocele roto ≠ gastrosquisis. Mira la LOCALIZACIÓN."
+  },
+
+
+  // =========================================================
+  // HERNIA INGUINAL E HIDROCELE
+  // =========================================================
+
+  {
+    id: 336,
+    tema: "Hernia inguinal e hidrocele",
+    dificultad: "Alta",
+    pregunta: "Lactante varón de 4 meses presenta desde hace varias semanas una masa inguinal derecha que aparece cuando llora y desaparece durante el sueño. Es indolora y reducible. ¿Cuál es la conducta más apropiada?",
+    opciones: [
+      "Observar hasta los 5 años esperando cierre espontáneo",
+      "Colocar una moneda sobre la región inguinal",
+      "Programar herniotomía",
+      "Realizar punción de la masa",
+      "No realizar seguimiento"
+    ],
+    correcta: 2,
+    explicacion: "La hernia inguinal pediátrica no se maneja esperando cierre espontáneo. Una vez diagnosticada, debe programarse tratamiento quirúrgico mediante herniotomía.",
+    fija: "HERNIA INGUINAL DIAGNOSTICADA = HERNIA OPERADA."
+  },
+
+  {
+    id: 337,
+    tema: "Hernia inguinal e hidrocele",
+    dificultad: "Alta",
+    pregunta: "Lactante de 8 meses tenía una masa inguinoescrotal que aparecía con el llanto y se reducía espontáneamente. Desde hace 5 horas la masa permanece fija, dolorosa, edematosa e irreductible, pero todavía no existen signos clínicos de isquemia. ¿Cómo se clasifica esta complicación?",
+    opciones: [
+      "Hidrocele comunicante",
+      "Hernia inguinal encarcelada",
+      "Hernia inguinal estrangulada",
+      "Hernia umbilical",
+      "Varicocele"
+    ],
+    correcta: 1,
+    explicacion: "Una hernia irreductible, dolorosa y edematosa sin evidencia definitiva de compromiso vascular corresponde a una hernia encarcelada.",
+    fija: "No reduce + dolor = ENCARCELADA."
+  },
+
+  {
+    id: 338,
+    tema: "Hernia inguinal e hidrocele",
+    dificultad: "Alta",
+    pregunta: "Niño con hernia inguinal irreductible presenta posteriormente dolor intenso, cambios de coloración de la piel y signos de compromiso vascular del contenido herniado. Durante la exploración se evidencia isquemia intestinal. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Hernia inguinal reductible",
+      "Hidrocele",
+      "Hernia inguinal estrangulada",
+      "Hernia umbilical no complicada",
+      "Quiste de cordón"
+    ],
+    correcta: 2,
+    explicacion: "La presencia de compromiso vascular, isquemia o necrosis del contenido herniado define la estrangulación.",
+    fija: "Hernia + compromiso vascular/isquemia = ESTRANGULADA."
+  },
+
+  {
+    id: 339,
+    tema: "Hernia inguinal e hidrocele",
+    dificultad: "Alta",
+    pregunta: "Lactante presenta aumento de volumen escrotal indoloro. No se palpa contenido intestinal y al colocar una fuente de luz detrás del escroto la masa transilumina claramente. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Hernia inguinal estrangulada",
+      "Tumor testicular sólido",
+      "Torsión testicular",
+      "Hidrocele",
+      "Apendicitis"
+    ],
+    correcta: 3,
+    explicacion: "El hidrocele contiene predominantemente líquido, por lo que la transiluminación positiva constituye un hallazgo clínico clásico.",
+    fija: "Masa escrotal + transiluminación positiva = HIDROCELE."
+  },
+
+  {
+    id: 340,
+    tema: "Hernia inguinal e hidrocele",
+    dificultad: "Alta",
+    pregunta: "Niña de 5 meses presenta una masa inguinal reducible que aparece al llorar. La ecografía demuestra contenido compatible con ovario dentro del canal inguinal. ¿Cuál es la explicación embriológica más probable?",
+    opciones: [
+      "Persistencia del conducto peritoneovaginal",
+      "Falla de cierre del conducto pleuroperitoneal",
+      "Persistencia del conducto onfalomesentérico",
+      "Falla de recanalización duodenal",
+      "Hipertrofia del músculo pilórico"
+    ],
+    correcta: 0,
+    explicacion: "La hernia inguinal pediátrica se relaciona fundamentalmente con persistencia del conducto peritoneovaginal, que permite el paso de contenido abdominal. En niñas el contenido puede incluir ovario o trompa.",
+    fija: "Hernia inguinal pediátrica = persistencia del conducto peritoneovaginal."
+  },
+
+
+  // =========================================================
+  // HERNIA UMBILICAL
+  // =========================================================
+
+  {
+    id: 341,
+    tema: "Hernia umbilical",
+    dificultad: "Alta",
+    pregunta: "Lactante de 6 meses presenta una pequeña masa umbilical que aumenta cuando llora y desaparece durante el sueño. Al examen se encuentra un defecto de 0.8 cm, indoloro y completamente reducible. ¿Cuál es la conducta más adecuada?",
+    opciones: [
+      "Cirugía urgente",
+      "Observación y controles periódicos",
+      "Colocación permanente de una moneda",
+      "Resección intestinal",
+      "Colostomía"
+    ],
+    correcta: 1,
+    explicacion: "Una hernia umbilical pequeña, reducible, indolora y no complicada puede observarse, ya que existe posibilidad de cierre espontáneo.",
+    fija: "Hernia umbilical pequeña que reduce = OBSERVAR."
+  },
+
+  {
+    id: 342,
+    tema: "Hernia umbilical",
+    dificultad: "Alta",
+    pregunta: "Niño con hernia umbilical tenía un defecto de 1 cm. En controles sucesivos el diámetro disminuye a 0.7 cm y posteriormente a 0.5 cm. Está asintomático. ¿Cómo debe interpretarse esta evolución?",
+    opciones: [
+      "Está presentando estrangulación",
+      "Requiere cirugía de emergencia",
+      "Existe cierre espontáneo progresivo y puede continuarse observación",
+      "Debe realizarse herniotomía inguinal",
+      "Corresponde a gastrosquisis"
+    ],
+    correcta: 2,
+    explicacion: "La disminución progresiva del diámetro indica tendencia al cierre espontáneo. Según el esquema del curso no corresponde cirugía inmediata.",
+    fija: "Umbilical que DISMINUYE = continúa observación."
+  },
+
+  {
+    id: 343,
+    tema: "Hernia umbilical",
+    dificultad: "Alta",
+    pregunta: "Niño de 2 años es controlado por hernia umbilical. El defecto inicialmente medía 1 cm, pero en controles posteriores aumentó progresivamente hasta 1.8 cm. ¿Cuál es la conducta más apropiada?",
+    opciones: [
+      "Continuar observación indefinidamente",
+      "Programar reparación quirúrgica",
+      "Colocar vendaje compresivo con moneda",
+      "Realizar enema neumático",
+      "No volver a controlar"
+    ],
+    correcta: 1,
+    explicacion: "Una hernia umbilical que aumenta progresivamente en lugar de cerrarse debe reevaluarse para reparación quirúrgica.",
+    fija: "Umbilical que AUMENTA = considerar CIRUGÍA."
+  },
+
+  {
+    id: 344,
+    tema: "Hernia umbilical",
+    dificultad: "Alta",
+    pregunta: "Madre de un lactante con pequeña hernia umbilical refiere que coloca diariamente una moneda fuertemente adherida sobre el ombligo porque le indicaron que así cerrará más rápido. ¿Cuál es la orientación más adecuada?",
+    opciones: [
+      "Mantener la moneda las 24 horas",
+      "Utilizar una moneda de mayor tamaño",
+      "Explicar que la moneda no produce el cierre y que muchas hernias pequeñas cierran espontáneamente",
+      "Realizar punción del saco cada semana",
+      "Indicar cirugía urgente por el uso de la moneda"
+    ],
+    correcta: 2,
+    explicacion: "El cierre espontáneo de una hernia umbilical pequeña no depende de colocar monedas ni objetos rígidos sobre el defecto.",
+    fija: "La moneda NO cierra una hernia umbilical."
+  },
+
+  {
+    id: 345,
+    tema: "Hernia umbilical",
+    dificultad: "Alta",
+    pregunta: "Se evalúan dos lactantes: el primero presenta una hernia inguinal derecha reducible y el segundo una pequeña hernia umbilical reducible que viene disminuyendo de tamaño. ¿Cuál es la conducta correcta?",
+    opciones: [
+      "Observar ambas hasta los 5 años",
+      "Operar ambas inmediatamente",
+      "Programar cirugía para la inguinal y observar inicialmente la umbilical",
+      "Observar la inguinal y operar la umbilical",
+      "Colocar monedas en ambas"
+    ],
+    correcta: 2,
+    explicacion: "La diferencia terapéutica es importante: la hernia inguinal pediátrica se opera una vez diagnosticada, mientras que una hernia umbilical pequeña y en proceso de cierre puede observarse.",
+    fija: "INGUINAL = operar. UMBILICAL pequeña que disminuye = observar."
+  },
+
+
+  // =========================================================
+  // HERNIA DIAFRAGMÁTICA CONGÉNITA
+  // =========================================================
+
+  {
+    id: 346,
+    tema: "Hernia diafragmática congénita",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta desde el nacimiento distrés respiratorio intenso y cianosis. Al examen se encuentra abdomen excavado, ruidos hidroaéreos en el hemitórax izquierdo y desplazamiento de los ruidos cardíacos hacia la derecha. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Atresia duodenal",
+      "Hernia de Bochdalek izquierda",
+      "Estenosis hipertrófica del píloro",
+      "Invaginación intestinal",
+      "Hernia umbilical"
+    ],
+    correcta: 1,
+    explicacion: "El distrés neonatal asociado a abdomen excavado e intestino dentro del tórax es característico de hernia diafragmática congénita. La variedad de Bochdalek es posterolateral y predominantemente izquierda.",
+    fija: "Distrés + abdomen excavado + intestino en tórax = HDC, típicamente Bochdalek izquierda."
+  },
+
+  {
+    id: 347,
+    tema: "Hernia diafragmática congénita",
+    dificultad: "Alta",
+    pregunta: "Radiografía toracoabdominal de un recién nacido con dificultad respiratoria muestra asas intestinales ocupando el hemitórax izquierdo y desplazamiento mediastínico contralateral. Se identifica un defecto posterolateral del diafragma. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Eventración diafragmática",
+      "Neumonía neonatal",
+      "Hernia de Morgagni",
+      "Hernia de Bochdalek",
+      "Atelectasia"
+    ],
+    correcta: 3,
+    explicacion: "La hernia de Bochdalek corresponde al defecto diafragmático congénito posterolateral y se presenta con mayor frecuencia en el lado izquierdo.",
+    fija: "BOCHDALEK = posterolateral."
+  },
+
+  {
+    id: 348,
+    tema: "Hernia diafragmática congénita",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con hernia diafragmática congénita confirmada presenta hipoxemia y dificultad respiratoria severa. ¿Cuál es la prioridad antes de realizar la reparación quirúrgica?",
+    opciones: [
+      "Llevarlo inmediatamente a cirugía sin preparación",
+      "Iniciar alimentación oral",
+      "Estabilización respiratoria, descompresión gastrointestinal y soporte hemodinámico",
+      "Realizar enema contrastado",
+      "Mantenerlo sin monitorización hasta que mejore espontáneamente"
+    ],
+    correcta: 2,
+    explicacion: "La hernia diafragmática congénita es una urgencia quirúrgica, pero la cirugía no debe precipitarse. Primero se estabiliza al paciente, se descomprime el tubo digestivo y se brinda soporte respiratorio.",
+    fija: "HDC: ESTABILIZAR primero → operar después."
+  },
+
+  {
+    id: 349,
+    tema: "Hernia diafragmática congénita",
+    dificultad: "Alta",
+    pregunta: "Niño es estudiado por elevación persistente de un hemidiafragma. Los estudios muestran un diafragma debilitado y elevado, pero no existe un verdadero orificio por el que pasen las vísceras abdominales. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Hernia de Bochdalek",
+      "Eventración diafragmática",
+      "Gastrosquisis",
+      "Ónfalocele",
+      "Atresia esofágica"
+    ],
+    correcta: 1,
+    explicacion: "En la eventración el diafragma se encuentra debilitado, laxo y elevado, pero no existe necesariamente un verdadero defecto u orificio como en una hernia diafragmática.",
+    fija: "Hernia = agujero. Eventración = diafragma elevado y débil."
+  },
+
+  {
+    id: 350,
+    tema: "Hernia diafragmática congénita",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con hernia diafragmática congénita es atendido inicialmente en un hospital que no dispone de cirugía pediátrica ni soporte neonatal definitivo. Luego de iniciar soporte respiratorio y colocar una sonda para descompresión gastrointestinal, ¿cuál es la siguiente conducta más apropiada?",
+    opciones: [
+      "Dar de alta para control ambulatorio",
+      "Suspender las medidas de soporte durante el traslado",
+      "Realizar alimentación oral antes del traslado",
+      "Trasladar rápidamente a un centro especializado manteniendo la estabilización",
+      "Esperar varios días sin referencia"
+    ],
+    correcta: 3,
+    explicacion: "Cuando el establecimiento no cuenta con capacidad quirúrgica adecuada, el paciente debe ser estabilizado y trasladado rápidamente a un centro especializado manteniendo las medidas de soporte.",
+    fija: "HDC en centro sin capacidad resolutiva = estabilizar + traslado rápido."
+  }
+
+];
 
   // =========================================================
   // PREGUNTAS INTEGRADORAS TIPO ENAM
   // PREGUNTAS 251–300
   // =========================================================
+  const questions9 = [
 
+  // =========================================================
+  // CASOS CLÍNICOS TIPO ENAM
+  // PREGUNTAS 351–375
+  // =========================================================
+
+
+  // =========================================================
+  // ACCIDENTES Y HERIDAS
+  // =========================================================
+
+  {
+    id: 351,
+    tema: "Accidentes y heridas",
+    dificultad: "Alta",
+    pregunta: "Niño de 3 años es llevado a emergencia luego de caer mientras jugaba en casa. Presenta una herida irregular en la frente que compromete piel y tejido celular subcutáneo. ¿Cuál es el principio más importante al planificar su reparación?",
+    opciones: [
+      "Todas las heridas pediátricas se suturan con la misma técnica",
+      "La técnica y el material deben adaptarse al tejido y localización comprometidos",
+      "Toda herida facial debe dejarse abierta",
+      "Las heridas solo se clasifican por su longitud",
+      "La profundidad no modifica el manejo"
+    ],
+    correcta: 1,
+    explicacion: "El manejo de una herida depende del mecanismo, localización, profundidad y tejido afectado. No es equivalente reparar piel, mucosa, lengua, paladar, cara o región genital.",
+    fija: "HERIDA PEDIÁTRICA: considerar mecanismo + localización + profundidad + tejido afectado."
+  },
+
+  {
+    id: 352,
+    tema: "Accidentes y heridas",
+    dificultad: "Alta",
+    pregunta: "Niño de 2 años sufre una herida cortante en la lengua al caer mientras caminaba con un objeto en la boca. ¿Por qué no debe manejarse exactamente igual que una herida lineal simple de piel?",
+    opciones: [
+      "Porque todas las lesiones de lengua requieren resección",
+      "Porque el tipo de tejido comprometido modifica la técnica de reparación",
+      "Porque la lengua nunca cicatriza",
+      "Porque todas las lesiones orales requieren cirugía mayor",
+      "Porque la profundidad no tiene importancia"
+    ],
+    correcta: 1,
+    explicacion: "La clase enfatiza que la técnica, el material y el tipo de punto deben adaptarse al tejido lesionado. No se maneja de igual forma piel, mucosa, lengua, paladar o región genital.",
+    fija: "No todas las heridas se suturan igual: importa QUÉ tejido está lesionado."
+  },
+
+  {
+    id: 353,
+    tema: "Accidentes y heridas",
+    dificultad: "Alta",
+    pregunta: "Durante una campaña de prevención se revisa el caso de un niño de 2 años que sufrió una caída por una escalera sin protección y posteriormente una quemadura por líquido caliente en la cocina. ¿Qué medida habría tenido mayor impacto preventivo?",
+    opciones: [
+      "Esperar a que el niño aprenda a reconocer el peligro",
+      "Reducir riesgos del hogar como escaleras desprotegidas y recipientes calientes",
+      "Evitar únicamente los accidentes de tránsito",
+      "Permitir libre acceso a objetos pequeños para mejorar coordinación",
+      "Eliminar solo los juguetes"
+    ],
+    correcta: 1,
+    explicacion: "El material enfatiza la prevención de accidentes domésticos mediante reducción de riesgos como escaleras desprotegidas, ventanas, líquidos calientes, objetos cortantes, tomacorrientes y sustancias peligrosas.",
+    fija: "Accidentes pediátricos: PREVENCIÓN en el hogar es parte del manejo."
+  },
+
+
+  // =========================================================
+  // QUEMADURAS PEDIÁTRICAS
+  // =========================================================
+
+  {
+    id: 354,
+    tema: "Quemaduras",
+    dificultad: "Alta",
+    pregunta: "Niño de 2 años llega a emergencia luego de derramarse agua caliente sobre el tórax y miembro superior. ¿Cuáles son los tres elementos fundamentales que deben evaluarse para estimar la gravedad de la quemadura?",
+    opciones: [
+      "Extensión, localización y profundidad",
+      "Peso, talla y perímetro cefálico",
+      "Edad, sexo y grupo sanguíneo",
+      "Temperatura, frecuencia cardíaca y hemoglobina únicamente",
+      "Dolor, llanto y apetito"
+    ],
+    correcta: 0,
+    explicacion: "La evaluación de una quemadura debe considerar fundamentalmente extensión, localización y profundidad, ya que estos elementos condicionan gravedad y tratamiento.",
+    fija: "QUEMADURAS = EXTENSIÓN + LOCALIZACIÓN + PROFUNDIDAD."
+  },
+
+  {
+    id: 355,
+    tema: "Quemaduras",
+    dificultad: "Alta",
+    pregunta: "Dos niños presentan quemaduras de similar extensión. El primero tiene lesiones en espalda y el segundo lesiones en manos y cuello. ¿Por qué el segundo requiere especial atención funcional?",
+    opciones: [
+      "Porque manos, cuello y pliegues tienen mayor riesgo de retracción y limitación funcional",
+      "Porque las quemaduras en manos nunca cicatrizan",
+      "Porque toda quemadura de cuello es de tercer grado",
+      "Porque la localización no modifica el pronóstico",
+      "Porque únicamente importa la extensión"
+    ],
+    correcta: 0,
+    explicacion: "La localización es un elemento clave. Cara, manos, cuello, axila, ingle y pliegues tienen especial importancia por el riesgo funcional y cicatricial.",
+    fija: "Quemadura en manos/cuello/pliegues = alto impacto FUNCIONAL."
+  },
+
+  {
+    id: 356,
+    tema: "Quemaduras",
+    dificultad: "Alta",
+    pregunta: "Niño con quemadura extensa presenta pérdida importante de líquidos y signos de deshidratación. ¿Qué complicación sistémica está directamente relacionada con la magnitud de la lesión?",
+    opciones: [
+      "Pérdida de líquidos y deshidratación",
+      "Atresia intestinal",
+      "Hidrocele",
+      "Fístula traqueoesofágica",
+      "Estenosis pilórica"
+    ],
+    correcta: 0,
+    explicacion: "Las quemaduras extensas pueden producir pérdida importante de líquidos, deshidratación, infección y destrucción tisular.",
+    fija: "A mayor extensión de quemadura → mayor riesgo sistémico."
+  },
+
+  {
+    id: 357,
+    tema: "Quemaduras",
+    dificultad: "Alta",
+    pregunta: "Paciente pediátrico con quemadura extensa recibe una cobertura temporal con tejido procesado. ¿Cuál es uno de los principales objetivos de esta cobertura?",
+    opciones: [
+      "Aumentar deliberadamente la pérdida de líquidos",
+      "Proteger la lesión y disminuir riesgo de infección y pérdida de líquidos",
+      "Evitar toda cicatrización",
+      "Producir necrosis controlada",
+      "Convertir una quemadura superficial en profunda"
+    ],
+    correcta: 1,
+    explicacion: "Las coberturas temporales mencionadas, como piel humana, piel porcina o amnios, buscan proteger la lesión, disminuir infección y reducir pérdida de líquidos.",
+    fija: "Cobertura temporal: PROTEGER + disminuir INFECCIÓN + reducir pérdida de LÍQUIDOS."
+  },
+
+  {
+    id: 358,
+    tema: "Quemaduras",
+    dificultad: "Alta",
+    pregunta: "Niña con quemadura sobre la región axilar evoluciona meses después con retracción cicatricial y dificultad para movilizar adecuadamente el miembro superior. ¿Qué característica inicial de la quemadura explica especialmente esta secuela?",
+    opciones: [
+      "La localización sobre un pliegue",
+      "La presencia de apetito conservado",
+      "El sexo femenino",
+      "La ausencia de fiebre",
+      "La edad escolar"
+    ],
+    correcta: 0,
+    explicacion: "Las quemaduras localizadas sobre pliegues pueden producir cicatrización retráctil, queloides y limitación funcional.",
+    fija: "Quemadura en PLIEGUE → riesgo de RETRACCIÓN y limitación funcional."
+  },
+
+
+  // =========================================================
+  // TRAUMATISMO ENCÉFALO-CRANEANO
+  // =========================================================
+
+  {
+    id: 359,
+    tema: "Traumatismo encéfalo-craneano",
+    dificultad: "Alta",
+    pregunta: "Niño de 4 años cae desde una altura. Horas después presenta equimosis periorbitaria bilateral. ¿Qué lesión debe sospecharse prioritariamente?",
+    opciones: [
+      "Fractura de base de cráneo",
+      "Fractura de clavícula",
+      "Atresia esofágica",
+      "Hernia diafragmática",
+      "Invaginación intestinal"
+    ],
+    correcta: 0,
+    explicacion: "La equimosis periorbitaria bilateral, denominada ojos de mapache, orienta a fractura de base de cráneo.",
+    fija: "OJOS DE MAPACHE = FRACTURA DE BASE DE CRÁNEO."
+  },
+
+  {
+    id: 360,
+    tema: "Traumatismo encéfalo-craneano",
+    dificultad: "Alta",
+    pregunta: "Niño de 3 años sufre traumatismo craneal tras caída por escaleras. Durante la evaluación presenta salida de sangre por el conducto auditivo externo. ¿Cómo se denomina este hallazgo?",
+    opciones: [
+      "Otorragia",
+      "Hematemesis",
+      "Hemoptisis",
+      "Epistaxis",
+      "Melena"
+    ],
+    correcta: 0,
+    explicacion: "La salida de sangre por el oído se denomina otorragia y puede asociarse con traumatismos importantes y fracturas del temporal.",
+    fija: "Sangre por oído después de TEC = OTORRAGIA."
+  },
+
+  {
+    id: 361,
+    tema: "Traumatismo encéfalo-craneano",
+    dificultad: "Alta",
+    pregunta: "Paciente pediátrico con traumatismo craneal severo presenta deterioro neurológico. Los estudios demuestran una colección hemorrágica intracraneal. ¿Qué complicaciones están reconocidas en este contexto?",
+    opciones: [
+      "Hemorragia epidural o subdural",
+      "Hidrocele y hernia inguinal",
+      "Atresia duodenal y yeyunal",
+      "Ónfalocele y gastrosquisis",
+      "Estenosis pilórica e invaginación"
+    ],
+    correcta: 0,
+    explicacion: "Los traumatismos graves y las fracturas craneales pueden asociarse a hemorragias epidurales o subdurales.",
+    fija: "TEC grave puede asociarse a HEMORRAGIA EPIDURAL o SUBDURAL."
+  },
+
+  {
+    id: 362,
+    tema: "Traumatismo encéfalo-craneano",
+    dificultad: "Alta",
+    pregunta: "Niño con traumatismo encéfalo-craneano y hemorragia intracraneal presenta progresivo deterioro clínico. ¿Qué especialidad puede requerirse en casos seleccionados según la gravedad de la lesión?",
+    opciones: [
+      "Neurocirugía",
+      "Dermatología",
+      "Oftalmología únicamente",
+      "Endocrinología",
+      "Reumatología"
+    ],
+    correcta: 0,
+    explicacion: "El material señala que las hemorragias intracraneales asociadas a traumatismos graves pueden requerir intervención neuroquirúrgica en casos seleccionados.",
+    fija: "TEC grave + hemorragia intracraneal = puede requerir NEUROCIRUGÍA."
+  },
+
+  {
+    id: 363,
+    tema: "Traumatismo encéfalo-craneano",
+    dificultad: "Alta",
+    pregunta: "En emergencia pediátrica se atiende a un niño pequeño después de una caída desde una ventana. El médico clasifica clínicamente el traumatismo según gravedad. ¿Cuál es la clasificación general empleada?",
+    opciones: [
+      "Leve, moderado o severo",
+      "Agudo, subagudo o crónico exclusivamente",
+      "Tipo I, II, III y IV",
+      "Congestivo, supurado y gangrenado",
+      "Reducible, encarcelado y estrangulado"
+    ],
+    correcta: 0,
+    explicacion: "El traumatismo encéfalo-craneano pediátrico se clasifica clínicamente como leve, moderado o severo.",
+    fija: "TEC pediátrico: LEVE / MODERADO / SEVERO."
+  },
+
+
+  // =========================================================
+  // CUERPOS EXTRAÑOS
+  // =========================================================
+
+  {
+    id: 364,
+    tema: "Cuerpos extraños",
+    dificultad: "Alta",
+    pregunta: "Niño de 3 años es llevado a emergencia después de ingerir una moneda. Presenta dificultad para deglutir. La radiografía muestra el objeto retenido en el esófago. ¿Cuál es el tratamiento más apropiado?",
+    opciones: [
+      "Extracción endoscópica",
+      "Esperar obligatoriamente 7 días",
+      "Realizar enema",
+      "Apendicectomía",
+      "Piloromiotomía"
+    ],
+    correcta: 0,
+    explicacion: "El material enfatiza que un cuerpo extraño esofágico retenido debe extraerse fundamentalmente mediante endoscopía.",
+    fija: "CUERPO EXTRAÑO ESOFÁGICO RETENIDO = ENDOSCOPÍA."
+  },
+
+  {
+    id: 365,
+    tema: "Cuerpos extraños",
+    dificultad: "Alta",
+    pregunta: "Niño ingiere un pequeño objeto metálico radiopaco. Está asintomático. ¿Cuál es el estudio inicial más útil para establecer su localización y progresión?",
+    opciones: [
+      "Radiografía",
+      "Electroencefalograma",
+      "Colonoscopía",
+      "Resonancia cerebral",
+      "Ecocardiograma"
+    ],
+    correcta: 0,
+    explicacion: "Cuando el objeto es radiopaco, la radiografía permite determinar aproximadamente el tipo de objeto, su localización y progresión por el tubo digestivo.",
+    fija: "Objeto radiopaco ingerido → RADIOGRAFÍA."
+  },
+
+  {
+    id: 366,
+    tema: "Cuerpos extraños",
+    dificultad: "Alta",
+    pregunta: "Niño de 4 años ingiere un objeto pequeño. En el control radiológico se confirma que ya pasó el esófago y avanza por el intestino. Permanece asintomático. ¿Qué evolución describe el material como habitual para muchos de estos objetos?",
+    opciones: [
+      "Eliminación espontánea en aproximadamente 24–48 horas",
+      "Retención permanente en todos los casos",
+      "Perforación obligatoria",
+      "Necesidad de laparotomía inmediata",
+      "Obstrucción intestinal inevitable"
+    ],
+    correcta: 0,
+    explicacion: "Cuando un objeto ya ha avanzado por el tubo digestivo y no se encuentra retenido, muchos pueden eliminarse espontáneamente; el material menciona habitualmente 24–48 horas.",
+    fija: "Objeto que ya progresa por intestino: muchos se eliminan espontáneamente en 24–48 h."
+  },
+
+  {
+    id: 367,
+    tema: "Cuerpos extraños",
+    dificultad: "Alta",
+    pregunta: "Niño de 2 años introduce una arveja en una fosa nasal. Se encuentra estable y sin compromiso respiratorio. ¿Cuál es el principio de manejo señalado para este tipo de cuerpos extraños?",
+    opciones: [
+      "Retirarlo con cuidado y cautela",
+      "Empujarlo profundamente hacia la nasofaringe",
+      "No intentar ninguna evaluación",
+      "Realizar laparotomía",
+      "Administrar alimentos para desplazarlo"
+    ],
+    correcta: 0,
+    explicacion: "Los cuerpos extraños de nariz y oído deben retirarse con mucho cuidado y cautela para evitar producir lesión adicional.",
+    fija: "Cuerpo extraño nasal/ótico = extracción cuidadosa."
+  },
+
+  {
+    id: 368,
+    tema: "Cuerpos extraños",
+    dificultad: "Alta",
+    pregunta: "Niño con antecedente de ingestión de moneda presenta objeto claramente retenido en esófago. La familia solicita esperar varios días porque creen que descenderá solo. ¿Cuál es la conducta correcta según el material?",
+    opciones: [
+      "Mantener observación indefinida aunque permanezca retenido",
+      "Realizar extracción endoscópica",
+      "Indicar únicamente líquidos abundantes",
+      "Provocar vómito repetidamente",
+      "Realizar enema de contraste"
+    ],
+    correcta: 1,
+    explicacion: "La conducta cambia cuando el objeto permanece retenido en el esófago. En este escenario la extracción endoscópica es el manejo enfatizado en el material.",
+    fija: "RETENIDO EN ESÓFAGO ≠ objeto que ya progresó. Retenido → ENDOSCOPÍA."
+  },
+
+
+  // =========================================================
+  // APENDICITIS AGUDA PEDIÁTRICA
+  // =========================================================
+
+  {
+    id: 369,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño de 8 años consulta por 18 horas de dolor abdominal. Inicialmente fue periumbilical y posteriormente migró hacia la fosa ilíaca derecha. Presenta vómitos y fiebre. ¿Cuál es el diagnóstico prioritario?",
+    opciones: [
+      "Apendicitis aguda",
+      "Estenosis hipertrófica del píloro",
+      "Atresia esofágica",
+      "Hidrocele",
+      "Hernia umbilical"
+    ],
+    correcta: 0,
+    explicacion: "El patrón clásico descrito es dolor inicialmente periumbilical que migra a fosa ilíaca derecha, acompañado de vómitos y fiebre.",
+    fija: "Dolor periumbilical → migra a FID + vómitos + fiebre = APENDICITIS."
+  },
+
+  {
+    id: 370,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño de 9 años presenta dolor abdominal, vómitos y fiebre. Al examen se encuentra dolor localizado en fosa ilíaca derecha. ¿Cómo se denomina la combinación clínica de dolor abdominal, vómitos y fiebre descrita en el material?",
+    opciones: [
+      "Tríada apendicular",
+      "Tríada de Beck",
+      "Tríada portal",
+      "Síndrome pilórico",
+      "Tríada de Virchow"
+    ],
+    correcta: 0,
+    explicacion: "El material denomina tríada apendicular a la combinación de dolor abdominal, vómitos y fiebre.",
+    fija: "TRÍADA APENDICULAR = dolor + vómitos + fiebre."
+  },
+
+  {
+    id: 371,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño de 7 años presenta dolor abdominal de varios días de evolución, fiebre alta, abdomen rígido y signos de peritonitis generalizada. ¿Qué forma de apendicitis debe sospecharse?",
+    opciones: [
+      "Apendicitis complicada/perforada",
+      "Apendicitis no complicada exclusivamente",
+      "Hernia umbilical",
+      "Atresia duodenal",
+      "Hidrocele"
+    ],
+    correcta: 0,
+    explicacion: "La apendicitis complicada se define en el esquema del material por perforación y puede evolucionar a peritonitis localizada o generalizada, plastrón o absceso.",
+    fija: "APENDICITIS COMPLICADA = PERFORADA."
+  },
+
+  {
+    id: 372,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño de 10 años consulta por cuadro compatible con apendicitis aguda. La familia refiere que recibió analgésicos repetidamente en casa y demoraron varios días en acudir. ¿Cuál es la principal preocupación respecto al retraso diagnóstico?",
+    opciones: [
+      "Progresión hacia perforación y peritonitis",
+      "Desarrollo de estenosis pilórica",
+      "Formación de hidrocele",
+      "Aparición de atresia intestinal",
+      "Cierre espontáneo del apéndice"
+    ],
+    correcta: 0,
+    explicacion: "El material enfatiza evitar enmascarar o retrasar el diagnóstico porque la demora puede permitir progresión hacia perforación y peritonitis.",
+    fija: "Apendicitis pediátrica: retraso diagnóstico → mayor riesgo de PERFORACIÓN."
+  },
+
+  {
+    id: 373,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Paciente de 8 años presenta apendicitis aguda confirmada sin evidencia de perforación. ¿Cómo se clasifica dentro del esquema desarrollado?",
+    opciones: [
+      "Apendicitis no complicada",
+      "Apendicitis complicada",
+      "Invaginación intestinal",
+      "Peritonitis secundaria obligatoria",
+      "Plastrón apendicular"
+    ],
+    correcta: 0,
+    explicacion: "El concepto esencial señalado es que la apendicitis no complicada corresponde a una forma no perforada.",
+    fija: "NO COMPLICADA = NO PERFORADA."
+  },
+
+  {
+    id: 374,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño con dolor abdominal migratorio a fosa ilíaca derecha, vómitos y fiebre tiene diagnóstico de apendicitis aguda. ¿Cuál es el tratamiento definitivo señalado en el material?",
+    opciones: [
+      "Apendicectomía",
+      "Piloromiotomía",
+      "Duodenoduodenostomía",
+      "Herniotomía",
+      "Anorrectoplastia"
+    ],
+    correcta: 0,
+    explicacion: "El tratamiento definitivo desarrollado para la apendicitis aguda pediátrica es la apendicectomía.",
+    fija: "APENDICITIS AGUDA → APENDICECTOMÍA."
+  },
+
+  {
+    id: 375,
+    tema: "Apendicitis aguda",
+    dificultad: "Alta",
+    pregunta: "Niño de 9 años llega a emergencia con dolor abdominal. El dolor todavía es inespecífico y no existe un diagnóstico definitivo. ¿Cuál es el principio clínico enfatizado para evitar complicaciones?",
+    opciones: [
+      "Mantener evaluación adecuada hasta descartar un cuadro quirúrgico",
+      "Dar alta inmediata a todo paciente sin fiebre",
+      "Ignorar la posibilidad de apendicitis hasta que aparezca peritonitis",
+      "Administrar alimentos y suspender observación",
+      "Esperar obligatoriamente una semana antes de reevaluar"
+    ],
+    correcta: 0,
+    explicacion: "El material enfatiza que todo dolor abdominal pediátrico debe mantenerse bajo evaluación adecuada hasta descartar un cuadro quirúrgico, evitando retrasos diagnósticos.",
+    fija: "Dolor abdominal pediátrico: DESCARTAR causa quirúrgica antes de cerrar el caso."
+  }
+
+];
+const questions10 = [
+
+  // =========================================================
+  // CASOS CLÍNICOS TIPO ENAM
+  // PREGUNTAS 376–400
+  // =========================================================
+
+
+  // =========================================================
+  // TRAUMA ABDOMINAL PEDIÁTRICO
+  // =========================================================
+
+  {
+    id: 376,
+    tema: "Trauma abdominal",
+    dificultad: "Alta",
+    pregunta: "Niño de 9 años sufre accidente de tránsito. Presenta traumatismo abdominal cerrado, palidez, taquicardia y signos de hemorragia intraabdominal importante. ¿Qué órganos sólidos deben considerarse especialmente como fuente potencial de sangrado?",
+    opciones: [
+      "Apéndice y píloro",
+      "Hígado y bazo",
+      "Esófago y tráquea",
+      "Recto y ano",
+      "Duodeno y píloro exclusivamente"
+    ],
+    correcta: 1,
+    explicacion: "En el trauma abdominal pediátrico los órganos sólidos resaltados por su capacidad de producir hemorragia intraabdominal importante son el hígado y el bazo.",
+    fija: "Trauma abdominal + hemoperitoneo → pensar especialmente en HÍGADO y BAZO."
+  },
+
+  {
+    id: 377,
+    tema: "Trauma abdominal",
+    dificultad: "Alta",
+    pregunta: "Niño llega a emergencia después de sufrir una herida abdominal penetrante. A través de la herida se observan asas intestinales exteriorizadas. ¿Cómo se denomina este hallazgo?",
+    opciones: [
+      "Eventración diafragmática",
+      "Invaginación",
+      "Evisceración",
+      "Gastrosquisis",
+      "Hernia umbilical"
+    ],
+    correcta: 2,
+    explicacion: "La salida de vísceras abdominales a través de una herida constituye una evisceración y representa una lesión grave.",
+    fija: "Vísceras que salen por una HERIDA abdominal = EVISCERACIÓN."
+  },
+
+  {
+    id: 378,
+    tema: "Trauma abdominal",
+    dificultad: "Alta",
+    pregunta: "Paciente pediátrico con traumatismo abdominal presenta abdomen rígido, dolor intenso generalizado y signos clínicos de peritonitis. ¿Cuál es la conducta que debe considerarse prioritariamente?",
+    opciones: [
+      "Alta domiciliaria",
+      "Observación indefinida sin evaluación quirúrgica",
+      "Manejo quirúrgico urgente",
+      "Alimentación oral inmediata",
+      "Colocación de moneda abdominal"
+    ],
+    correcta: 2,
+    explicacion: "La peritonitis manifiesta después de un trauma abdominal es una de las situaciones señaladas como indicación de manejo quirúrgico urgente.",
+    fija: "Trauma + PERITONITIS = pensar en CIRUGÍA URGENTE."
+  },
+
+  {
+    id: 379,
+    tema: "Trauma abdominal",
+    dificultad: "Alta",
+    pregunta: "Niño de 7 años sufre traumatismo abdominal. Los estudios evidencian hemoperitoneo masivo y deterioro clínico progresivo. ¿Cuál es la conducta más apropiada según el esquema del curso?",
+    opciones: [
+      "Solo control ambulatorio",
+      "Manejo quirúrgico urgente",
+      "Esperar varios días antes de reevaluar",
+      "Realizar piloromiotomía",
+      "Realizar enema neumático"
+    ],
+    correcta: 1,
+    explicacion: "El hemoperitoneo masivo es una de las condiciones que pueden requerir entrada rápida a sala de operaciones.",
+    fija: "HEMOPERITONEO MASIVO = manejo quirúrgico urgente."
+  },
+
+  {
+    id: 380,
+    tema: "Trauma abdominal",
+    dificultad: "Alta",
+    pregunta: "Paciente pediátrico sufre herida penetrante abdominal con sospecha de perforación de víscera hueca. ¿Cuál de los siguientes hallazgos reforzaría más la necesidad de intervención quirúrgica urgente?",
+    opciones: [
+      "Peritonitis manifiesta",
+      "Hambre posterior al vómito",
+      "Masa inguinal reductible",
+      "Transiluminación escrotal positiva",
+      "Oliva pilórica"
+    ],
+    correcta: 0,
+    explicacion: "Perforación visceral y peritonitis son datos de gravedad dentro del trauma abdominal y orientan a intervención quirúrgica urgente.",
+    fija: "PERFORACIÓN + PERITONITIS postrauma = CIRUGÍA."
+  },
+
+
+  // =========================================================
+  // DIVERTÍCULO DE MECKEL
+  // =========================================================
+
+  {
+    id: 381,
+    tema: "Divertículo de Meckel",
+    dificultad: "Alta",
+    pregunta: "Durante una cirugía abdominal pediátrica se encuentra de manera incidental un divertículo intestinal. ¿En qué borde del intestino se localiza característicamente el divertículo de Meckel?",
+    opciones: [
+      "Borde mesentérico",
+      "Borde antimesentérico",
+      "Curvatura menor gástrica",
+      "Colon sigmoide",
+      "Recto distal"
+    ],
+    correcta: 1,
+    explicacion: "El dato anatómico enfatizado en el material es que el divertículo de Meckel se localiza en el borde antimesentérico del intestino.",
+    fija: "MECKEL = BORDE ANTIMESENTÉRICO."
+  },
+
+  {
+    id: 382,
+    tema: "Divertículo de Meckel",
+    dificultad: "Alta",
+    pregunta: "Niño presenta sangrado digestivo relacionado con un divertículo de Meckel. ¿Qué tejido ectópico se relaciona especialmente con esta complicación?",
+    opciones: [
+      "Mucosa gástrica",
+      "Tejido pulmonar",
+      "Músculo esquelético",
+      "Cartílago",
+      "Mucosa vesical"
+    ],
+    correcta: 0,
+    explicacion: "El divertículo de Meckel puede contener mucosa ectópica y el material enfatiza especialmente la mucosa gástrica, relacionada con hemorragia.",
+    fija: "MECKEL + HEMORRAGIA → pensar en MUCOSA GÁSTRICA ECTÓPICA."
+  },
+
+  {
+    id: 383,
+    tema: "Divertículo de Meckel",
+    dificultad: "Alta",
+    pregunta: "Niño de mayor edad presenta episodios recurrentes de invaginación intestinal. Durante el estudio se busca una lesión anatómica capaz de iniciar el telescopaje intestinal. ¿Cuál de las siguientes puede actuar como punto guía?",
+    opciones: [
+      "Hidrocele",
+      "Divertículo de Meckel",
+      "Hernia umbilical",
+      "Estenosis pilórica",
+      "Atresia esofágica"
+    ],
+    correcta: 1,
+    explicacion: "El divertículo de Meckel puede funcionar como punto guía para una invaginación intestinal, especialmente cuando existe una causa anatómica subyacente.",
+    fija: "MECKEL puede ser PUNTO GUÍA DE INVAGINACIÓN."
+  },
+
+  {
+    id: 384,
+    tema: "Divertículo de Meckel",
+    dificultad: "Alta",
+    pregunta: "Paciente pediátrico presenta divertículo de Meckel complicado, sin evidencia de compromiso intestinal extenso. ¿Cuál es el tratamiento quirúrgico señalado?",
+    opciones: [
+      "Diverticulectomía",
+      "Piloromiotomía",
+      "Apendicectomía obligatoria como único procedimiento",
+      "Herniotomía",
+      "Duodenoduodenostomía"
+    ],
+    correcta: 0,
+    explicacion: "Cuando el divertículo de Meckel se presenta complicado, el tratamiento señalado es la diverticulectomía.",
+    fija: "MECKEL COMPLICADO → DIVERTICULECTOMÍA."
+  },
+
+  {
+    id: 385,
+    tema: "Divertículo de Meckel",
+    dificultad: "Alta",
+    pregunta: "Durante cirugía por divertículo de Meckel complicado se encuentra compromiso importante del segmento intestinal adyacente. ¿Cuál es la conducta más apropiada?",
+    opciones: [
+      "Cerrar abdomen sin tratamiento",
+      "Resección intestinal con anastomosis término-terminal",
+      "Realizar únicamente biopsia",
+      "Colocar silo",
+      "Realizar piloromiotomía"
+    ],
+    correcta: 1,
+    explicacion: "Cuando existe compromiso intestinal mayor asociado a Meckel, el material señala resección intestinal seguida de anastomosis término-terminal.",
+    fija: "MECKEL + compromiso intestinal importante = RESECCIÓN + ANASTOMOSIS."
+  },
+
+
+  // =========================================================
+  // CASOS INTEGRADORES TIPO ENAM
+  // =========================================================
+
+  {
+    id: 386,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta sialorrea intensa, episodios de tos y cianosis. No se logra avanzar una sonda orogástrica y la radiografía muestra la sonda enrollada en el cabo proximal junto con gas abdominal. ¿Cuál es la interpretación más probable?",
+    opciones: [
+      "Atresia esofágica pura",
+      "Atresia esofágica con fístula traqueoesofágica distal",
+      "Atresia duodenal",
+      "Hernia diafragmática",
+      "Estenosis hipertrófica del píloro"
+    ],
+    correcta: 1,
+    explicacion: "La imposibilidad de avanzar la sonda indica atresia esofágica; la presencia de aire en el abdomen orienta a comunicación distal con la tráquea.",
+    fija: "Sonda no pasa + gas abdominal = AE + FTE DISTAL."
+  },
+
+  {
+    id: 387,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con vómitos precoces presenta radiografía abdominal con una imagen de doble burbuja y ausencia de gas distal. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Atresia yeyunoileal",
+      "Atresia duodenal",
+      "Invaginación",
+      "Hernia inguinal",
+      "Apendicitis"
+    ],
+    correcta: 1,
+    explicacion: "La doble burbuja constituye el hallazgo radiológico fundamental de la atresia duodenal.",
+    fija: "DOBLE BURBUJA = ATRESIA DUODENAL."
+  },
+
+  {
+    id: 388,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido con obstrucción intestinal presenta múltiples niveles hidroaéreos. Otro paciente presenta todavía mayor cantidad de niveles. ¿Qué interpretación es la más correcta?",
+    opciones: [
+      "A mayor número de niveles, más distal puede encontrarse la obstrucción",
+      "A mayor número de niveles, más proximal siempre es la obstrucción",
+      "El número de niveles no tiene relación con el nivel de obstrucción",
+      "El hallazgo indica obligatoriamente estenosis pilórica",
+      "El hallazgo descarta atresia intestinal"
+    ],
+    correcta: 0,
+    explicacion: "En las obstrucciones intestinales neonatales desarrolladas en el curso, más niveles hidroaéreos orientan a una obstrucción más distal.",
+    fija: "MÁS NIVELES HIDROAÉREOS = obstrucción MÁS DISTAL."
+  },
+
+  {
+    id: 389,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido varón presenta ausencia de ano y salida de meconio a través de la orina. ¿Cuál es la interpretación más probable?",
+    opciones: [
+      "Malformación anorrectal con fístula rectourinaria",
+      "Atresia duodenal",
+      "Estenosis pilórica",
+      "Hernia umbilical",
+      "Gastrosquisis"
+    ],
+    correcta: 0,
+    explicacion: "La presencia de meconio en la orina en un recién nacido con ano imperforado orienta a una comunicación rectourinaria.",
+    fija: "ANO IMPERFORADO + MECONIO EN ORINA = fístula rectourinaria."
+  },
+
+  {
+    id: 390,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante varón primogénito de 3 semanas presenta vómitos en proyectil no biliosos después de alimentarse y vuelve a mostrar hambre inmediatamente. Se palpa una oliva epigástrica. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Invaginación intestinal",
+      "Estenosis hipertrófica del píloro",
+      "Atresia esofágica",
+      "Apendicitis",
+      "Hernia diafragmática"
+    ],
+    correcta: 1,
+    explicacion: "La edad, el sexo masculino, el antecedente de primogénito, el vómito proyectil no bilioso, hambre posterior y oliva pilórica constituyen el cuadro típico de EHP.",
+    fija: "3 semanas + vómito proyectil + hambre + oliva = EHP."
+  },
+
+  {
+    id: 391,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante con estenosis hipertrófica del píloro confirmada llega deshidratado y con alteraciones hidroelectrolíticas. ¿Cuál debe ser la conducta antes de operarlo?",
+    opciones: [
+      "Piloromiotomía inmediata sin estabilización",
+      "Corregir primero el balance hidroelectrolítico",
+      "Dar de alta",
+      "Realizar enema",
+      "Iniciar alimentación abundante"
+    ],
+    correcta: 1,
+    explicacion: "La EHP es una urgencia quirúrgica, pero no debe operarse al paciente deshidratado. Primero se corrigen las alteraciones hidroelectrolíticas.",
+    fija: "EHP: primero HIDRATAR Y CORREGIR ELECTROLITOS → luego cirugía."
+  },
+
+  {
+    id: 392,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante de 5 meses presenta episodios súbitos de llanto, flexión de piernas al abdomen, vómitos y posteriormente deposiciones con sangre y moco. ¿Cuál es el diagnóstico más probable?",
+    opciones: [
+      "Estenosis pilórica",
+      "Invaginación intestinal",
+      "Atresia duodenal",
+      "Apendicitis",
+      "Hidrocele"
+    ],
+    correcta: 1,
+    explicacion: "El cuadro de dolor paroxístico, flexión de piernas, vómitos y deposiciones en jalea de grosella es típico de invaginación.",
+    fija: "Dolor paroxístico + jalea de grosella = INVAGINACIÓN."
+  },
+
+  {
+    id: 393,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta asas intestinales exteriorizadas a la derecha del cordón umbilical, sin membrana protectora y con edema y fibrina sobre las asas. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Ónfalocele",
+      "Gastrosquisis",
+      "Hernia umbilical",
+      "Hernia inguinal",
+      "Malformación anorrectal"
+    ],
+    correcta: 1,
+    explicacion: "La gastrosquisis aparece típicamente a la derecha del cordón, no posee saco y deja las asas directamente expuestas.",
+    fija: "Derecha del cordón + SIN saco = GASTROSQUISIS."
+  },
+
+  {
+    id: 394,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta vísceras herniadas a través del anillo umbilical, cubiertas por una membrana, y el cordón se inserta en el saco. ¿Cuál es el diagnóstico?",
+    opciones: [
+      "Gastrosquisis",
+      "Ónfalocele",
+      "Hernia inguinal",
+      "Evisceración traumática",
+      "Hidrocele"
+    ],
+    correcta: 1,
+    explicacion: "El ónfalocele se origina en el anillo umbilical, posee saco y el cordón umbilical se inserta en él.",
+    fija: "ANILLO UMBILICAL + SACO = ÓNFALOCELE."
+  },
+
+  {
+    id: 395,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante presenta una masa inguinal que aparece al llorar y desaparece durante el reposo. No existe dolor ni signos de encarcelamiento. ¿Cuál es la conducta adecuada?",
+    opciones: [
+      "Observar varios años esperando cierre espontáneo",
+      "Programar herniotomía",
+      "Colocar una moneda",
+      "Realizar enema",
+      "No realizar ningún seguimiento"
+    ],
+    correcta: 1,
+    explicacion: "La hernia inguinal pediátrica se trata quirúrgicamente una vez diagnosticada, incluso cuando es reducible y asintomática.",
+    fija: "HERNIA INGUINAL DIAGNOSTICADA = OPERAR."
+  },
+
+  {
+    id: 396,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante con masa inguinal previamente reductible presenta ahora dolor, edema e irreductibilidad, pero sin signos de isquemia. ¿Cuál es la clasificación correcta?",
+    opciones: [
+      "Hernia estrangulada",
+      "Hernia encarcelada",
+      "Hidrocele simple",
+      "Hernia umbilical",
+      "Gastrosquisis"
+    ],
+    correcta: 1,
+    explicacion: "La irreductibilidad y el dolor sin compromiso vascular definitorio corresponden a encarcelamiento.",
+    fija: "IRREDUCTIBLE + DOLOR, sin isquemia = ENCARCELADA."
+  },
+
+  {
+    id: 397,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Lactante de 8 meses presenta hernia umbilical pequeña, indolora y reducible. En controles sucesivos el defecto disminuye progresivamente de tamaño. ¿Cuál es la mejor conducta?",
+    opciones: [
+      "Cirugía urgente",
+      "Observación y controles",
+      "Herniotomía inguinal",
+      "Apendicectomía",
+      "Piloromiotomía"
+    ],
+    correcta: 1,
+    explicacion: "Una hernia umbilical pequeña que disminuye progresivamente puede observarse debido a la posibilidad de cierre espontáneo.",
+    fija: "Umbilical pequeña que DISMINUYE = OBSERVAR."
+  },
+
+  {
+    id: 398,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Recién nacido presenta distrés respiratorio severo, abdomen excavado y ruidos intestinales en el hemitórax izquierdo. ¿Cuál debe ser el primer principio de manejo?",
+    opciones: [
+      "Cirugía inmediata sin preparación",
+      "Estabilización, soporte respiratorio y descompresión gastrointestinal",
+      "Alimentación oral",
+      "Enema de aire",
+      "Alta ambulatoria"
+    ],
+    correcta: 1,
+    explicacion: "En la hernia diafragmática congénita primero debe estabilizarse al paciente, proporcionar soporte respiratorio y descomprimir el tracto gastrointestinal antes de la reparación quirúrgica.",
+    fija: "HDC = ESTABILIZAR PRIMERO, operar después."
+  },
+
+  {
+    id: 399,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Niño de 8 años presenta dolor inicialmente periumbilical que migra a fosa ilíaca derecha, acompañado de vómitos y fiebre. ¿Cuál es el tratamiento definitivo si se confirma el diagnóstico esperado?",
+    opciones: [
+      "Piloromiotomía",
+      "Apendicectomía",
+      "Herniotomía",
+      "Diverticulectomía",
+      "Duodenoduodenostomía"
+    ],
+    correcta: 1,
+    explicacion: "El cuadro corresponde a apendicitis aguda pediátrica y el tratamiento definitivo desarrollado es la apendicectomía.",
+    fija: "APENDICITIS AGUDA → APENDICECTOMÍA."
+  },
+
+  {
+    id: 400,
+    tema: "Integradoras clínicas",
+    dificultad: "Alta",
+    pregunta: "Niño de mayor edad presenta una invaginación intestinal recurrente. Durante la evaluación se identifica una lesión en el borde antimesentérico del intestino que contiene mucosa gástrica ectópica. ¿Cuál es el diagnóstico de la lesión que probablemente actuó como punto guía?",
+    opciones: [
+      "Hernia umbilical",
+      "Divertículo de Meckel",
+      "Atresia duodenal",
+      "Hidrocele",
+      "Estenosis hipertrófica del píloro"
+    ],
+    correcta: 1,
+    explicacion: "La combinación de localización antimesentérica, posible mucosa gástrica ectópica y capacidad de actuar como punto guía de invaginación corresponde al divertículo de Meckel.",
+    fija: "Borde antimesentérico + mucosa gástrica + invaginación = MECKEL."
+  }
+
+];
+const questions6 = [
   {
     id: 251,
     tema: "Integradoras",
@@ -5236,5 +7058,9 @@ const questions = [
   ...questions3,
   ...questions4,
   ...questions5,
-  ...questions6
+  ...questions6,
+  ...questions7,
+  ...questions8,
+  ...questions9,
+  ...questions10
 ];
