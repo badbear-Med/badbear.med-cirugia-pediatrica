@@ -126,6 +126,8 @@ let preguntasSesion = [];
 
 let origenSesion = "banco";
 
+let tipoSesionExamenes = "normal";
+
 let preguntaActual = 0;
 
 let respuestaSeleccionada = null;
@@ -404,8 +406,10 @@ if (origenSesion === "examenes") {
   dificultadPregunta.textContent =
     `🔥 REPETIDA ${pregunta.repetida} VECES`;
 
-  modoPregunta.textContent =
-    "Examen pasado";
+modoPregunta.textContent =
+  tipoSesionExamenes === "falladas"
+    ? "Repaso de falladas"
+    : "Examen pasado";
 
 } else {
 
@@ -845,10 +849,12 @@ function siguientePregunta() {
 // ============================================================
 
 function mostrarResultadoFinal() {
-  if (origenSesion === "examenes") {
+if (origenSesion === "examenes") {
 
   tituloResultadoFinal.textContent =
-    "Exámenes pasados completados";
+    tipoSesionExamenes === "falladas"
+      ? "Repaso de falladas completado"
+      : "Exámenes pasados completados";
 
 } else {
 
@@ -1394,7 +1400,8 @@ function actualizarFiltroExamenes(
 
   totalExamenesPasados.textContent =
     cantidad;
-
+btnIniciarExamenes.textContent =
+  `Iniciar práctica (${cantidad})`;
 }
 
 
@@ -1462,6 +1469,8 @@ const progresoExamenes =
 
     origenSesion =
       "examenes";
+
+      tipoSesionExamenes = "falladas";
 
 
     preguntasSesion =
@@ -1532,6 +1541,8 @@ btnIniciarExamenes.addEventListener(
   () => {
 
     origenSesion = "examenes";
+
+    tipoSesionExamenes = "normal";
 
     let preguntasFiltradas =
   [...examenesPasados];

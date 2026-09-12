@@ -2570,3 +2570,57 @@ button {
   border-color: #2962ff;
   color: #ffffff;
 }
+/* ============================================================
+   ESTADÍSTICAS - EXÁMENES PASADOS
+============================================================ */
+
+#estadisticas-examenes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin: 18px 0;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#estadisticas-examenes > strong {
+  grid-column: 1 / -1;
+
+  color: #53627a;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+#estadisticas-examenes span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 72px;
+
+  background: #f6f8fc;
+  border: 1px solid #e1e6ef;
+  border-radius: 14px;
+
+  font-size: 13px;
+  color: #65728a;
+}
+
+#estadisticas-examenes span strong {
+  margin-top: 6px;
+
+  font-size: 20px;
+  color: #0d1b3e;
+}
+
+@media (max-width: 700px) {
+
+  #estadisticas-examenes {
+    grid-template-columns: 1fr;
+  }
+
+}
