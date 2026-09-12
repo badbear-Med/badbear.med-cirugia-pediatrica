@@ -8,7 +8,47 @@
 // ============================================================
 // ELEMENTOS DEL DOM
 // ============================================================
+const btnIniciarExamenes =
+  document.getElementById("btn-iniciar-examenes");
 
+const btnExamenesFalladas =
+  document.getElementById(
+    "btn-examenes-falladas"
+  );
+
+const filtroExamenTodas =
+  document.getElementById("filtro-examen-todas");
+
+const filtroExamenRepetidas =
+  document.getElementById("filtro-examen-repetidas");
+
+const filtroExamenImagen =
+  document.getElementById("filtro-examen-imagen");
+
+
+let filtroExamenesSeleccionado =
+  "todas";
+
+const totalExamenesPasados =
+  document.getElementById("total-examenes-pasados");
+
+const estadisticasExamenesCorrectas =
+  document.getElementById(
+    "estadisticas-examenes-correctas"
+  );
+
+const estadisticasExamenesIncorrectas =
+  document.getElementById(
+    "estadisticas-examenes-incorrectas"
+  );
+
+const estadisticasExamenesPorcentaje =
+  document.getElementById(
+    "estadisticas-examenes-porcentaje"
+  );
+
+  totalExamenesPasados.textContent =
+  examenesPasados.length;
 const pantallaInicio = document.getElementById("pantalla-inicio");
 const pantallaQuiz = document.getElementById("pantalla-quiz");
 const pantallaFinal = document.getElementById("pantalla-final");
@@ -38,6 +78,11 @@ const contadorCorrectas = document.getElementById("contador-correctas");
 const contadorIncorrectas = document.getElementById("contador-incorrectas");
 
 const textoPregunta = document.getElementById("texto-pregunta");
+const contenedorImagenPregunta =
+  document.getElementById("contenedor-imagen-pregunta");
+
+const imagenPregunta =
+  document.getElementById("imagen-pregunta");
 const opciones = document.getElementById("opciones");
 
 const btnResponder = document.getElementById("btn-responder");
@@ -52,6 +97,11 @@ const explicacion = document.getElementById("explicacion");
 
 const bloqueFija = document.getElementById("bloque-fija");
 const textoFija = document.getElementById("texto-fija");
+
+const tituloResultadoFinal =
+  document.getElementById(
+    "titulo-resultado-final"
+  );
 
 const puntajeFinal = document.getElementById("puntaje-final");
 const porcentajeFinal = document.getElementById("porcentaje-final");
@@ -73,6 +123,8 @@ const revisionErrores = document.getElementById("revision-errores");
 // ============================================================
 
 let preguntasSesion = [];
+
+let origenSesion = "banco";
 
 let preguntaActual = 0;
 
@@ -245,6 +297,7 @@ btnIniciar.addEventListener(
 
 
 function iniciarBanco() {
+  origenSesion = "banco";
 
   preguntaActual = 0;
 
@@ -291,13 +344,13 @@ function iniciarBanco() {
 
 
   preguntasSesion =
-    bancoFiltrado.slice(
-      0,
-      Math.min(
-        cantidadDeseada,
-        bancoFiltrado.length
-      )
-    );
+  bancoFiltrado.slice(
+    0,
+    Math.min(
+      cantidadDeseada,
+      bancoFiltrado.length
+    )
+  );
 
 
   contadorCorrectas.textContent = "0";
@@ -346,14 +399,25 @@ function mostrarPregunta() {
     pregunta.tema;
 
 
+if (origenSesion === "examenes") {
+
+  dificultadPregunta.textContent =
+    `🔥 REPETIDA ${pregunta.repetida} VECES`;
+
+  modoPregunta.textContent =
+    "Examen pasado";
+
+} else {
+
   dificultadPregunta.textContent =
     pregunta.dificultad;
-
 
   modoPregunta.textContent =
     modoActual === "estudio"
       ? "Modo estudio"
       : "Modo examen";
+
+}
 
 
   contadorPregunta.textContent =
@@ -363,6 +427,25 @@ function mostrarPregunta() {
 
   textoPregunta.textContent =
     pregunta.pregunta;
+
+    if (pregunta.imagen) {
+
+  contenedorImagenPregunta.classList.remove("oculto");
+
+  imagenPregunta.src =
+    pregunta.imagen;
+
+  imagenPregunta.alt =
+    pregunta.altImagen ||
+    `Imagen clínica de ${pregunta.tema}`;
+
+} else {
+
+  contenedorImagenPregunta.classList.add("oculto");
+
+  imagenPregunta.src = "";
+
+}
 
 
   opciones.innerHTML = "";
@@ -762,6 +845,17 @@ function siguientePregunta() {
 // ============================================================
 
 function mostrarResultadoFinal() {
+  if (origenSesion === "examenes") {
+
+  tituloResultadoFinal.textContent =
+    "Exámenes pasados completados";
+
+} else {
+
+  tituloResultadoFinal.textContent =
+    "Banco completado";
+
+}
 
   pantallaQuiz.classList.add(
     "oculto"
@@ -772,7 +866,11 @@ function mostrarResultadoFinal() {
     "oculto"
   );
 
-activarNav(navProgreso);
+if (origenSesion === "examenes") {
+  activarNav(navExamenes);
+} else {
+  activarNav(navProgreso);
+}
   const total =
     preguntasSesion.length;
 
@@ -1001,10 +1099,23 @@ function reiniciarBanco() {
   );
 
 
+  if (origenSesion === "examenes") {
+
+  pantallaExamenes.classList.remove(
+    "oculto"
+  );
+
+  activarNav(navExamenes);
+
+} else {
+
   pantallaInicio.classList.remove(
     "oculto"
   );
 
+  activarNav(navBanco);
+
+}
 
   revisionErrores.innerHTML = "";
 
@@ -1026,6 +1137,9 @@ const navInicio =
 const navBanco =
   document.getElementById("nav-banco");
 
+  const navExamenes =
+  document.getElementById("nav-examenes");
+
 const navTeoria =
   document.getElementById("nav-teoria");
 
@@ -1038,6 +1152,8 @@ const navTotalPreguntas =
 const pantallaTeoria =
   document.getElementById("pantalla-teoria");
 
+  const pantallaExamenes =
+  document.getElementById("pantalla-examenes");
 
 // ============================================================
 // TOTAL DE PREGUNTAS
@@ -1075,6 +1191,8 @@ function ocultarPantallas() {
   pantallaQuiz.classList.add("oculto");
 
   pantallaFinal.classList.add("oculto");
+
+  pantallaExamenes.classList.add("oculto");
 
   pantallaTeoria.classList.add("oculto");
 
@@ -1118,10 +1236,11 @@ navBanco.addEventListener(
 
 
     // Si ya estamos resolviendo un banco
-    if (
-      preguntasSesion.length > 0 &&
-      preguntaActual < preguntasSesion.length
-    ) {
+if (
+  origenSesion === "banco" &&
+  preguntasSesion.length > 0 &&
+  preguntaActual < preguntasSesion.length
+) {
 
       ocultarPantallas();
 
@@ -1165,6 +1284,336 @@ navBanco.addEventListener(
   }
 );
 
+// ============================================================
+// EXÁMENES PASADOS
+// ============================================================
+
+navExamenes.addEventListener(
+  "click",
+  () => {
+
+    activarNav(navExamenes);
+
+    actualizarEstadisticasExamenes();
+
+    if (
+      origenSesion === "examenes" &&
+      preguntasSesion.length > 0 &&
+      preguntaActual < preguntasSesion.length
+    ) {
+
+      ocultarPantallas();
+
+      pantallaQuiz.classList.remove(
+        "oculto"
+      );
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+      return;
+    }
+
+    ocultarPantallas();
+
+    pantallaExamenes.classList.remove(
+      "oculto"
+    );
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+);
+
+// ============================================================
+// FILTROS DE EXÁMENES PASADOS
+// ============================================================
+
+function actualizarFiltroExamenes(
+  filtro,
+  botonActivo
+) {
+
+  filtroExamenesSeleccionado =
+    filtro;
+
+  [
+    filtroExamenTodas,
+    filtroExamenRepetidas,
+    filtroExamenImagen
+  ].forEach(
+    boton =>
+      boton.classList.remove(
+        "filtro-examen-activo"
+      )
+  );
+
+  botonActivo.classList.add(
+    "filtro-examen-activo"
+  );
+
+
+  let cantidad = 0;
+
+  if (filtro === "todas") {
+
+    cantidad =
+      examenesPasados.length;
+
+  }
+
+  else if (
+    filtro === "repetidas"
+  ) {
+
+    cantidad =
+      examenesPasados.filter(
+        pregunta =>
+          pregunta.repetida >= 5
+      ).length;
+
+  }
+
+  else if (
+    filtro === "imagen"
+  ) {
+
+    cantidad =
+      examenesPasados.filter(
+        pregunta =>
+          Boolean(pregunta.imagen)
+      ).length;
+
+  }
+
+
+  totalExamenesPasados.textContent =
+    cantidad;
+
+}
+
+
+filtroExamenTodas.addEventListener(
+  "click",
+  () =>
+    actualizarFiltroExamenes(
+      "todas",
+      filtroExamenTodas
+    )
+);
+
+
+filtroExamenRepetidas.addEventListener(
+  "click",
+  () =>
+    actualizarFiltroExamenes(
+      "repetidas",
+      filtroExamenRepetidas
+    )
+);
+
+
+filtroExamenImagen.addEventListener(
+  "click",
+  () =>
+    actualizarFiltroExamenes(
+      "imagen",
+      filtroExamenImagen
+    )
+);
+
+// ============================================================
+// PRACTICAR FALLADAS - EXÁMENES PASADOS
+// ============================================================
+
+btnExamenesFalladas.addEventListener(
+  "click",
+  () => {
+
+const progresoExamenes =
+  obtenerProgresoExamenes();
+
+
+    const preguntasFalladas =
+      examenesPasados.filter(
+        pregunta =>
+          progresoExamenes.preguntas[
+            pregunta.id
+          ]?.fallada === true
+      );
+
+
+    if (
+      preguntasFalladas.length === 0
+    ) {
+
+      alert(
+        "No tienes preguntas falladas pendientes."
+      );
+
+      return;
+    }
+
+
+    origenSesion =
+      "examenes";
+
+
+    preguntasSesion =
+      preguntasFalladas.sort(
+        (a, b) =>
+          b.repetida - a.repetida
+      );
+
+
+    preguntaActual = 0;
+
+    respuestaSeleccionada = null;
+
+    correctas = 0;
+
+    incorrectas = 0;
+
+    preguntaRespondida = false;
+
+    respuestasUsuario = [];
+
+    modoActual =
+      "estudio";
+
+
+    contadorCorrectas.textContent =
+      "0";
+
+    contadorIncorrectas.textContent =
+      "0";
+
+    porcentajeAvance.textContent =
+      "0%";
+
+    notaVigesimal.textContent =
+      "— / 20";
+
+    progreso.style.width =
+      "0%";
+
+
+    ocultarPantallas();
+
+    pantallaQuiz.classList.remove(
+      "oculto"
+    );
+
+    activarNav(
+      navExamenes
+    );
+
+    mostrarPregunta();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+);
+
+// ============================================================
+// INICIAR EXÁMENES PASADOS
+// ============================================================
+
+btnIniciarExamenes.addEventListener(
+  "click",
+  () => {
+
+    origenSesion = "examenes";
+
+    let preguntasFiltradas =
+  [...examenesPasados];
+
+
+if (
+  filtroExamenesSeleccionado ===
+  "repetidas"
+) {
+
+  preguntasFiltradas =
+    preguntasFiltradas.filter(
+      pregunta =>
+        pregunta.repetida >= 5
+    );
+
+}
+
+
+if (
+  filtroExamenesSeleccionado ===
+  "imagen"
+) {
+
+  preguntasFiltradas =
+    preguntasFiltradas.filter(
+      pregunta =>
+        Boolean(pregunta.imagen)
+    );
+
+}
+
+
+preguntasSesion =
+  preguntasFiltradas.sort(
+    (a, b) =>
+      b.repetida - a.repetida
+  );
+
+    preguntaActual = 0;
+    respuestaSeleccionada = null;
+
+    correctas = 0;
+    incorrectas = 0;
+
+    preguntaRespondida = false;
+    respuestasUsuario = [];
+
+    // Exámenes pasados se estudian con explicación inmediata
+    modoActual = "estudio";
+
+
+    contadorCorrectas.textContent = "0";
+    contadorIncorrectas.textContent = "0";
+
+    porcentajeAvance.textContent = "0%";
+
+    notaVigesimal.textContent =
+      "— / 20";
+
+    progreso.style.width = "0%";
+
+
+    ocultarPantallas();
+
+    pantallaQuiz.classList.remove(
+      "oculto"
+    );
+
+    activarNav(
+      navExamenes
+    );
+
+    mostrarPregunta();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+);
 
 // ============================================================
 // TEORÍA
@@ -1252,6 +1701,8 @@ navProgreso.addEventListener(
 const STORAGE_KEY =
   "badbear_med_cirugia_pediatrica_v1";
 
+const STORAGE_KEY_EXAMENES =
+  "badbear_med_cirugia_pediatrica_examenes_v1";
 
 // ============================================================
 // ELEMENTOS
@@ -1315,6 +1766,192 @@ function crearProgresoInicial() {
 
 }
 
+// ============================================================
+// PROGRESO INDEPENDIENTE - EXÁMENES PASADOS
+// ============================================================
+
+function crearProgresoInicialExamenes() {
+
+  return {
+
+    respondidas: 0,
+
+    correctas: 0,
+
+    incorrectas: 0,
+
+    preguntas: {}
+
+  };
+
+}
+
+
+function obtenerProgresoExamenes() {
+
+  const guardado =
+    localStorage.getItem(
+      STORAGE_KEY_EXAMENES
+    );
+
+  if (!guardado) {
+
+    return crearProgresoInicialExamenes();
+
+  }
+
+  try {
+
+    return JSON.parse(
+      guardado
+    );
+
+  } catch (error) {
+
+    return crearProgresoInicialExamenes();
+
+  }
+
+}
+
+
+function guardarProgresoExamenes(
+  progreso
+) {
+
+  localStorage.setItem(
+    STORAGE_KEY_EXAMENES,
+    JSON.stringify(progreso)
+  );
+
+}
+
+function actualizarEstadisticasExamenes() {
+
+  const progreso =
+    obtenerProgresoExamenes();
+
+
+  estadisticasExamenesCorrectas.textContent =
+    progreso.correctas;
+
+
+  estadisticasExamenesIncorrectas.textContent =
+    progreso.incorrectas;
+
+
+  const total =
+    progreso.correctas +
+    progreso.incorrectas;
+
+
+  const porcentaje =
+    total > 0
+      ? Math.round(
+          (progreso.correctas / total) * 100
+        )
+      : 0;
+
+
+  estadisticasExamenesPorcentaje.textContent =
+    `${porcentaje}%`;
+const falladasPendientes =
+  examenesPasados.filter(
+    pregunta =>
+      progreso.preguntas[
+        pregunta.id
+      ]?.fallada === true
+  ).length;
+
+
+btnExamenesFalladas.textContent =
+  `Practicar preguntas falladas (${falladasPendientes})`;
+
+  btnExamenesFalladas.disabled =
+  falladasPendientes === 0;
+}
+
+function registrarRespuestaExamenes(
+  pregunta,
+  esCorrecta
+) {
+
+  const progreso =
+    obtenerProgresoExamenes();
+
+
+  progreso.respondidas++;
+
+
+  if (esCorrecta) {
+
+    progreso.correctas++;
+
+  } else {
+
+    progreso.incorrectas++;
+
+  }
+
+
+  if (
+    !progreso.preguntas[
+      pregunta.id
+    ]
+  ) {
+
+    progreso.preguntas[
+      pregunta.id
+    ] = {
+
+      intentos: 0,
+
+      correctas: 0,
+
+      incorrectas: 0,
+
+      ultimaCorrecta: false,
+
+      fallada: false
+
+    };
+
+  }
+
+
+  const registro =
+    progreso.preguntas[
+      pregunta.id
+    ];
+
+
+  registro.intentos++;
+
+
+  if (esCorrecta) {
+
+    registro.correctas++;
+
+    registro.fallada = false;
+
+  } else {
+
+    registro.incorrectas++;
+
+    registro.fallada = true;
+
+  }
+
+
+  registro.ultimaCorrecta =
+    esCorrecta;
+
+
+  guardarProgresoExamenes(
+    progreso
+  );
+actualizarEstadisticasExamenes();
+}
 
 // ============================================================
 // LEER PROGRESO
@@ -1480,6 +2117,10 @@ function registrarRespuestaGlobal(
 // CAPTURAR RESPUESTAS DEL BANCO
 // ============================================================
 
+// ============================================================
+// GUARDAR PROGRESO SEGÚN EL ORIGEN DE LA SESIÓN
+// ============================================================
+
 btnResponder.addEventListener(
   "click",
   () => {
@@ -1488,27 +2129,40 @@ btnResponder.addEventListener(
       !preguntaRespondida ||
       respuestaSeleccionada === null
     ) {
-
       return;
-
     }
-
 
     const pregunta =
       preguntasSesion[
         preguntaActual
       ];
 
-
     const esCorrecta =
       respuestaSeleccionada ===
       pregunta.correcta;
 
+    if (
+      origenSesion === "examenes"
+    ) {
 
-    registrarRespuestaGlobal(
-      pregunta,
-      esCorrecta
-    );
+      registrarRespuestaExamenes(
+        pregunta,
+        esCorrecta
+      );
+
+      return;
+    }
+
+    if (
+      origenSesion === "banco"
+    ) {
+
+      registrarRespuestaGlobal(
+        pregunta,
+        esCorrecta
+      );
+
+    }
 
   }
 );
@@ -1612,6 +2266,7 @@ btnPracticarFalladas.addEventListener(
 
 
 function iniciarPreguntasFalladas() {
+  origenSesion = "banco";
 
   const progresoGlobal =
     obtenerProgresoGlobal();

@@ -2516,3 +2516,17 @@ button {
   }
 
 }
+.contenedor-imagen-pregunta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 22px;
+}
+
+.imagen-pregunta {
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 14px;
+  display: block;
+}

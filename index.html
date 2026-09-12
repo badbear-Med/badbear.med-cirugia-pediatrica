@@ -81,6 +81,14 @@
   </button>
 
   <button
+  type="button"
+  id="nav-examenes"
+  class="nav-item"
+>
+  Exámenes pasados
+</button>
+
+  <button
     type="button"
     id="nav-teoria"
     class="nav-item"
@@ -414,7 +422,111 @@
 
     </section>
 
+<!-- =====================================================
+     EXÁMENES PASADOS
+====================================================== -->
 
+<section
+  id="pantalla-examenes"
+  class="pantalla oculto"
+>
+
+  <div class="tarjeta-quiz">
+
+    <div class="teoria-cabecera">
+
+      <span class="progreso-global-etiqueta">
+        BANCO HISTÓRICO BADBEAR.MED
+      </span>
+
+      <h2>
+        Exámenes pasados del curso
+      </h2>
+
+      <p>
+        Preguntas reales del curso, depuradas y corregidas por BADBEAR.MED.
+      </p>
+
+    </div>
+
+<div
+  id="resumen-examenes-pasados"
+  class="info-seleccion"
+>
+  <strong id="total-examenes-pasados">0</strong>
+  preguntas depuradas disponibles
+</div>
+
+<div
+  id="estadisticas-examenes"
+  class="info-seleccion"
+>
+  <strong>Rendimiento histórico:</strong>
+
+  <span>
+    ✅ Correctas:
+    <strong id="estadisticas-examenes-correctas">0</strong>
+  </span>
+
+  <span>
+    ❌ Incorrectas:
+    <strong id="estadisticas-examenes-incorrectas">0</strong>
+  </span>
+
+  <span>
+    📊 Rendimiento:
+    <strong id="estadisticas-examenes-porcentaje">0%</strong>
+  </span>
+</div>
+
+<div
+  class="filtros-examenes-pasados"
+  id="filtros-examenes-pasados"
+>
+
+  <button
+    type="button"
+    class="filtro-examen-activo"
+    id="filtro-examen-todas"
+  >
+    Todas
+  </button>
+
+  <button
+    type="button"
+    id="filtro-examen-repetidas"
+  >
+    🔥 Muy repetidas
+  </button>
+
+  <button
+    type="button"
+    id="filtro-examen-imagen"
+  >
+    🖼️ Con imagen
+  </button>
+
+</div>
+
+<button
+  id="btn-iniciar-examenes"
+  class="boton boton-principal"
+  type="button"
+>
+  Iniciar práctica
+</button>
+
+<button
+  id="btn-examenes-falladas"
+  class="boton boton-secundario"
+  type="button"
+>
+  Practicar preguntas falladas
+</button>
+
+  </div>
+
+</section>
 
     <!-- =====================================================
          QUIZ
@@ -524,7 +636,18 @@
           Aquí aparecerá la pregunta.
         </h2>
 
-
+<div
+  id="contenedor-imagen-pregunta"
+  class="contenedor-imagen-pregunta oculto"
+>
+  <img
+    id="imagen-pregunta"
+    class="imagen-pregunta"
+    src=""
+    alt="Imagen clínica de la pregunta"
+    draggable="false"
+  >
+</div>
 
         <div
           id="opciones"
@@ -868,9 +991,9 @@
           RESULTADO FINAL
         </p>
 
-        <h2>
-          Banco completado
-        </h2>
+<h2 id="titulo-resultado-final">
+  Banco completado
+</h2>
 
 
         <div class="resultado-principal">
@@ -987,8 +1110,9 @@
 
 
 
-  <script src="js/questions.js"></script>
-  <script src="js/app.js?v=300"></script>
+<script src="js/questions.js"></script>
+<script src="js/examenes-pasados.js"></script>
+<script src="js/app.js?v=300"></script>
 
 </body>
 
