@@ -1,0 +1,84 @@
+/* ============================================================
+   BADBEAR.MED - MARCAS DE AGUA GRANDES
+   Replica el efecto visual de la version local
+============================================================ */
+
+.tarjeta-inicio,
+.tarjeta-quiz,
+.tarjeta-final,
+.progreso-global,
+.estadisticas-temas {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.tarjeta-inicio::before,
+.tarjeta-quiz::before,
+.tarjeta-final::before,
+.progreso-global::before,
+.estadisticas-temas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: none;
+  background-image: url("../assets/logo/badbear-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 560px;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tarjeta-inicio > *,
+.tarjeta-quiz > *,
+.tarjeta-final > *,
+.progreso-global > *,
+.estadisticas-temas > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* En la tarjeta principal colocamos la marca un poco mas arriba
+   para que sea visible desde el primer pantallazo. */
+.tarjeta-inicio::before {
+  background-position: center 70px;
+  background-size: 610px;
+}
+
+/* El bloque de progreso conserva una marca central muy visible,
+   como en la version local. */
+.progreso-global::before {
+  background-size: 430px;
+  opacity: 0.105;
+}
+
+.estadisticas-temas::before {
+  background-size: 440px;
+  opacity: 0.075;
+}
+
+@media (max-width: 700px) {
+  .tarjeta-inicio::before,
+  .tarjeta-quiz::before,
+  .tarjeta-final::before,
+  .progreso-global::before,
+  .estadisticas-temas::before {
+    background-size: 330px;
+    opacity: 0.075;
+  }
+
+  .tarjeta-inicio::before {
+    background-position: center 45px;
+    background-size: 360px;
+  }
+
+  .progreso-global::before {
+    background-size: 300px;
+  }
+}
