@@ -7,131 +7,313 @@
   <title>Acceso | BADBEAR.MED Cirugía Pediátrica</title>
   <link rel="icon" type="image/png" href="assets/logo/badbear-logo.png">
   <style>
+    :root {
+      --bb-navy: #0d1b3e;
+      --bb-blue: #2962ff;
+      --bb-sky: #65d6ff;
+      --bb-pink: #ff5fa2;
+      --bb-red: #e53935;
+      --bb-orange: #ff7a00;
+      --bb-yellow: #ffc933;
+      --bb-green: #21b66f;
+      --bb-text: #13213f;
+      --bb-muted: #65738d;
+    }
+
     * { box-sizing: border-box; }
     html, body { min-height: 100%; }
+
     body {
       margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
-      padding: 24px;
+      padding: 28px;
+      overflow: hidden;
+      position: relative;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(145deg, #f7f9fd 0%, #eef3ff 55%, #f8f5ff 100%);
-      color: #0d1b3e;
+      color: var(--bb-text);
+      background:
+        radial-gradient(circle at 9% 13%, rgba(229,57,53,.16), transparent 24%),
+        radial-gradient(circle at 22% 84%, rgba(255,122,0,.16), transparent 26%),
+        radial-gradient(circle at 49% 7%, rgba(255,201,51,.18), transparent 24%),
+        radial-gradient(circle at 79% 16%, rgba(33,182,111,.15), transparent 27%),
+        radial-gradient(circle at 91% 78%, rgba(41,98,255,.16), transparent 29%),
+        radial-gradient(circle at 68% 94%, rgba(255,95,162,.12), transparent 25%),
+        linear-gradient(145deg, #fbfcff 0%, #f4f8ff 48%, #fffaf4 100%);
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -40px;
+      background-image: url("assets/logo/badbear-logo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: min(610px, 72vw);
+      opacity: .085;
+      filter: saturate(1.12);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      right: -230px;
+      top: -220px;
+      background: conic-gradient(
+        from 40deg,
+        rgba(229,57,53,.12),
+        rgba(255,122,0,.14),
+        rgba(255,201,51,.14),
+        rgba(33,182,111,.13),
+        rgba(41,98,255,.13),
+        rgba(255,95,162,.12),
+        rgba(229,57,53,.12)
+      );
+      filter: blur(12px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .acceso {
-      width: min(460px, 100%);
-      background: rgba(255,255,255,.96);
-      border: 1px solid #e3e8f2;
-      border-radius: 24px;
-      padding: 34px;
-      box-shadow: 0 24px 70px rgba(13,27,62,.12);
+      width: min(470px, 100%);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      background: rgba(255,255,255,.93);
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 28px;
+      padding: 38px 36px 32px;
+      box-shadow:
+        0 28px 80px rgba(13,27,62,.16),
+        0 1px 0 rgba(255,255,255,.95) inset;
       text-align: center;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
+
+    .acceso::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 7px;
+      background: linear-gradient(
+        90deg,
+        var(--bb-red) 0%,
+        var(--bb-orange) 18%,
+        var(--bb-yellow) 36%,
+        var(--bb-green) 56%,
+        var(--bb-blue) 78%,
+        var(--bb-pink) 100%
+      );
+    }
+
     .logo {
-      width: 78px;
-      height: 78px;
+      width: 98px;
+      height: 98px;
       object-fit: contain;
-      margin-bottom: 12px;
+      margin: 2px 0 12px;
+      filter: drop-shadow(0 12px 18px rgba(41,98,255,.18));
     }
+
     .marca {
       margin: 0;
-      font-size: 30px;
+      font-size: 32px;
       line-height: 1;
-      font-weight: 900;
-      letter-spacing: -.8px;
+      font-weight: 950;
+      letter-spacing: -.9px;
+      color: var(--bb-navy);
     }
-    .marca span { color: #2962ff; }
+
+    .marca span {
+      background: linear-gradient(90deg, var(--bb-blue), var(--bb-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
     .curso {
-      margin: 8px 0 24px;
-      color: #68758d;
-      font-weight: 700;
+      margin: 9px 0 22px;
+      color: var(--bb-muted);
+      font-weight: 750;
       font-size: 14px;
     }
-    .etiqueta {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: #2962ff;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1.4px;
+
+    .paleta {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin: -4px 0 20px;
     }
+
+    .paleta i {
+      width: 18px;
+      height: 6px;
+      border-radius: 999px;
+      display: block;
+      box-shadow: 0 3px 8px rgba(13,27,62,.08);
+    }
+
+    .paleta i:nth-child(1) { background: var(--bb-red); }
+    .paleta i:nth-child(2) { background: var(--bb-orange); }
+    .paleta i:nth-child(3) { background: var(--bb-yellow); }
+    .paleta i:nth-child(4) { background: var(--bb-green); }
+    .paleta i:nth-child(5) { background: var(--bb-blue); }
+    .paleta i:nth-child(6) { background: var(--bb-pink); }
+
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 11px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #9b3d00;
+      background: linear-gradient(90deg, rgba(255,201,51,.22), rgba(255,122,0,.14));
+      border: 1px solid rgba(255,122,0,.25);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 1.25px;
+    }
+
+    .etiqueta::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bb-red);
+      box-shadow: 0 0 0 4px rgba(229,57,53,.10);
+    }
+
     h2 {
       margin: 0 0 8px;
-      font-size: 24px;
+      font-size: 25px;
+      color: var(--bb-navy);
     }
+
     .descripcion {
-      margin: 0 0 24px;
-      color: #66738a;
+      margin: 0 auto 25px;
+      max-width: 360px;
+      color: var(--bb-muted);
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
+
     label {
       display: block;
       text-align: left;
       margin-bottom: 8px;
-      color: #45536d;
+      color: #42506a;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 850;
     }
-    .campo {
-      position: relative;
-    }
+
+    .campo { position: relative; }
+
     input {
       width: 100%;
-      height: 50px;
-      padding: 0 48px 0 15px;
+      height: 52px;
+      padding: 0 50px 0 16px;
       border: 1px solid #d9e0ec;
-      border-radius: 13px;
+      border-radius: 15px;
       outline: none;
       font-size: 16px;
-      color: #0d1b3e;
-      background: #fff;
+      color: var(--bb-navy);
+      background: rgba(255,255,255,.96);
+      transition: .2s ease;
     }
+
+    input:hover { border-color: #c5cfdf; }
+
     input:focus {
-      border-color: #2962ff;
-      box-shadow: 0 0 0 4px rgba(41,98,255,.10);
+      border-color: var(--bb-green);
+      box-shadow:
+        0 0 0 4px rgba(33,182,111,.11),
+        0 8px 22px rgba(41,98,255,.06);
     }
+
     .ver {
       position: absolute;
       right: 8px;
-      top: 7px;
+      top: 8px;
       width: 36px;
       height: 36px;
-      border: 0;
-      border-radius: 9px;
-      background: #f2f5fb;
+      border: 1px solid #e5eaf2;
+      border-radius: 10px;
+      background: #f6f8fc;
       color: #56637a;
       cursor: pointer;
       font-size: 16px;
+      transition: .2s ease;
     }
+
+    .ver:hover {
+      color: var(--bb-blue);
+      border-color: rgba(41,98,255,.25);
+      background: rgba(41,98,255,.07);
+    }
+
     .ingresar {
       width: 100%;
-      min-height: 50px;
+      min-height: 52px;
       margin-top: 14px;
       border: 0;
-      border-radius: 13px;
-      background: #0d1b3e;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        100deg,
+        #d93434 0%,
+        #f26f00 24%,
+        #f2b900 43%,
+        #18a866 62%,
+        #2962ff 82%,
+        #df4b8e 100%
+      );
       color: #fff;
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 950;
       cursor: pointer;
+      box-shadow: 0 12px 25px rgba(41,98,255,.18);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
     }
-    .ingresar:hover { background: #162a59; }
-    .ingresar:disabled { opacity: .65; cursor: wait; }
+
+    .ingresar:hover {
+      transform: translateY(-1px);
+      filter: saturate(1.12) brightness(1.02);
+      box-shadow: 0 16px 30px rgba(13,27,62,.20);
+    }
+
+    .ingresar:active { transform: translateY(0); }
+    .ingresar:disabled { opacity: .65; cursor: wait; transform: none; }
+
     .error {
       min-height: 21px;
       margin: 11px 0 0;
       color: #c62828;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
     }
+
     .pie {
       margin: 22px 0 0;
       padding-top: 18px;
       border-top: 1px solid #edf0f5;
       color: #8a94a8;
       font-size: 11px;
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 18px; }
+      body::before { background-size: 118vw; opacity: .07; }
+      .acceso { padding: 34px 22px 27px; border-radius: 24px; }
+      .logo { width: 88px; height: 88px; }
+      .marca { font-size: 29px; }
     }
   </style>
 </head>
@@ -140,6 +322,10 @@
     <img class="logo" src="assets/logo/badbear-logo.png" alt="BADBEAR.MED">
     <h1 class="marca">BADBEAR<span>.MED</span></h1>
     <p class="curso">Cirugía Pediátrica</p>
+
+    <div class="paleta" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
 
     <span class="etiqueta">ACCESO RESTRINGIDO</span>
     <h2>Contenido protegido</h2>
