@@ -1,1119 +1,216 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="BADBEAR.MED - Banco de preguntas de Cirugía Pediátrica"
-  >
-
-  <title>BADBEAR.MED | Cirugía Pediátrica
-    del grupo WAJOMEA
-  </title>
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/logo/badbear-logo.png"
->
-  <link
-    rel="stylesheet"
-    href="css/styles.css"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Acceso | BADBEAR.MED Cirugía Pediátrica</title>
+  <link rel="icon" type="image/png" href="assets/logo/badbear-logo.png">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(145deg, #f7f9fd 0%, #eef3ff 55%, #f8f5ff 100%);
+      color: #0d1b3e;
+    }
+    .acceso {
+      width: min(460px, 100%);
+      background: rgba(255,255,255,.96);
+      border: 1px solid #e3e8f2;
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 24px 70px rgba(13,27,62,.12);
+      text-align: center;
+    }
+    .logo {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .marca {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.8px;
+    }
+    .marca span { color: #2962ff; }
+    .curso {
+      margin: 8px 0 24px;
+      color: #68758d;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .etiqueta {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #2962ff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+    .descripcion {
+      margin: 0 0 24px;
+      color: #66738a;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      color: #45536d;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .campo {
+      position: relative;
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 0 48px 0 15px;
+      border: 1px solid #d9e0ec;
+      border-radius: 13px;
+      outline: none;
+      font-size: 16px;
+      color: #0d1b3e;
+      background: #fff;
+    }
+    input:focus {
+      border-color: #2962ff;
+      box-shadow: 0 0 0 4px rgba(41,98,255,.10);
+    }
+    .ver {
+      position: absolute;
+      right: 8px;
+      top: 7px;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      border-radius: 9px;
+      background: #f2f5fb;
+      color: #56637a;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .ingresar {
+      width: 100%;
+      min-height: 50px;
+      margin-top: 14px;
+      border: 0;
+      border-radius: 13px;
+      background: #0d1b3e;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .ingresar:hover { background: #162a59; }
+    .ingresar:disabled { opacity: .65; cursor: wait; }
+    .error {
+      min-height: 21px;
+      margin: 11px 0 0;
+      color: #c62828;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .pie {
+      margin: 22px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid #edf0f5;
+      color: #8a94a8;
+      font-size: 11px;
+    }
+  </style>
 </head>
-
-
 <body>
+  <main class="acceso">
+    <img class="logo" src="assets/logo/badbear-logo.png" alt="BADBEAR.MED">
+    <h1 class="marca">BADBEAR<span>.MED</span></h1>
+    <p class="curso">Cirugía Pediátrica</p>
 
-  <main class="app">
+    <span class="etiqueta">ACCESO RESTRINGIDO</span>
+    <h2>Contenido protegido</h2>
+    <p class="descripcion">Ingresa la clave para acceder al banco, teoría, progreso y exámenes pasados.</p>
 
-   <header class="header">
-
-  <div class="header-contenido">
-
-    <!-- MARCA -->
-    <div class="marca">
-
-      <img
-        src="./assets/logo/badbear-logo.png"
-        alt="BADBEAR.MED"
-        class="logo-badbear"
-      >
-
-      <div class="marca-texto">
-
-        <h1>
-          BADBEAR<span>.MED</span>
-        </h1>
-
-        <p>
-          Cirugía Pediátrica
-        </p>
-
+    <form id="form-acceso" autocomplete="off">
+      <label for="clave">Clave de acceso</label>
+      <div class="campo">
+        <input id="clave" name="clave" type="password" autocomplete="current-password" required autofocus>
+        <button class="ver" id="ver-clave" type="button" aria-label="Mostrar u ocultar clave">👁</button>
       </div>
-
-    </div>
-
-
-    <!-- NAVEGACIÓN -->
-   <nav class="nav-badbear">
-
-  <button
-    type="button"
-    id="nav-inicio"
-    class="nav-item activo"
-  >
-    Inicio
-  </button>
-
-  <button
-    type="button"
-    id="nav-banco"
-    class="nav-item"
-  >
-    Banco
-  </button>
-
-  <button
-  type="button"
-  id="nav-examenes"
-  class="nav-item"
->
-  Exámenes pasados
-</button>
-
-  <button
-    type="button"
-    id="nav-teoria"
-    class="nav-item"
-  >
-    Teoría
-  </button>
-
-  <button
-    type="button"
-    id="nav-progreso"
-    class="nav-item"
-  >
-    Progreso
-  </button>
-
-  <div class="nav-total">
-
-    <strong id="nav-total-preguntas">
-      400
-    </strong>
-
-    <span>
-      preguntas
-    </span>
-
-  </div>
-
-</nav>
-
-  </div>
-
-</header>
-
-
-    <!-- =====================================================
-         PANTALLA INICIAL
-    ====================================================== -->
-
-    <section
-      id="pantalla-inicio"
-      class="pantalla inicio"
-    >
-
-      <div class="tarjeta-inicio">
-
-        <p class="etiqueta-superior">
-          BANCO DE PREGUNTAS
-        </p>
-
-        <h2>
-          Cirugía Pediátrica
-        </h2>
-
-        <p class="descripcion-inicio">
-          Preguntas de alto nivel basadas en el
-          cuaderno de Cirugía Pediátrica Desarrolladas en clase.
-        </p>
-
-
-        <div class="datos-banco">
-
-          <div class="dato">
-            <span
-              id="cantidad-preguntas"
-              class="dato-numero"
-            >
-              0
-            </span>
-
-            <span class="dato-texto">
-              Preguntas disponibles
-            </span>
-          </div>
-
-          <div class="dato">
-            <span class="dato-numero">
-              5
-            </span>
-
-            <span class="dato-texto">
-              Alternativas
-            </span>
-          </div>
-
-          <div class="dato">
-            <span class="dato-numero">
-              ENAM
-            </span>
-
-            <span class="dato-texto">
-              Estilo
-            </span>
-          </div>
-
-        </div>
-<!-- =====================================================
-     PROGRESO GLOBAL BADBEAR.MED
-====================================================== -->
-
-<div class="progreso-global">
-
-  <div class="progreso-global-titulo">
-    <div>
-      <span class="progreso-global-etiqueta">
-        TU PROGRESO
-      </span>
-
-      <h3>
-        Rendimiento acumulado
-      </h3>
-    </div>
-
-    <button
-      id="btn-borrar-progreso"
-      class="boton-borrar-progreso"
-      type="button"
-    >
-      Reiniciar estadísticas
-    </button>
-  </div>
-
-
-  <div class="progreso-global-grid">
-
-    <div class="estadistica-global">
-      <span id="global-respondidas" class="estadistica-numero">
-        0
-      </span>
-      <span class="estadistica-texto">
-        Respondidas
-      </span>
-    </div>
-
-    <div class="estadistica-global">
-      <span id="global-correctas" class="estadistica-numero">
-        0
-      </span>
-      <span class="estadistica-texto">
-        Correctas
-      </span>
-    </div>
-
-    <div class="estadistica-global">
-      <span id="global-rendimiento" class="estadistica-numero">
-        0%
-      </span>
-      <span class="estadistica-texto">
-        Rendimiento
-      </span>
-    </div>
-
-    <div class="estadistica-global">
-      <span id="global-nota" class="estadistica-numero">
-        — / 20
-      </span>
-      <span class="estadistica-texto">
-        Nota global
-      </span>
-    </div>
-
-    <div class="estadistica-global estadistica-falladas">
-      <span id="global-falladas" class="estadistica-numero">
-        0
-      </span>
-      <span class="estadistica-texto">
-        Falladas pendientes
-      </span>
-    </div>
-
-  </div>
-
-
-  <button
-    id="btn-practicar-falladas"
-    class="boton boton-falladas"
-    type="button"
-  >
-    Practicar solo preguntas falladas
-  </button>
-
-</div>
-<!-- =====================================================
-     ESTADÍSTICAS POR TEMA
-====================================================== -->
-
-<div class="estadisticas-temas">
-
-  <div class="estadisticas-temas-cabecera">
-
-    <div>
-      <span class="progreso-global-etiqueta">
-        ANÁLISIS DE RENDIMIENTO
-      </span>
-
-      <h3>
-        Rendimiento por tema
-      </h3>
-
-      <p>
-        Identifica qué temas dominas y cuáles necesitas reforzar.
-      </p>
-    </div>
-
-  </div>
-
-
-  <div
-    id="lista-estadisticas-temas"
-    class="lista-estadisticas-temas"
-  >
-  </div>
-
-</div>
-        <!-- CONFIGURACIÓN -->
-
-        <div class="configuracion-banco">
-
-          <h3>
-            Configura tu práctica
-          </h3>
-
-
-          <div class="configuracion-grid">
-
-
-            <div class="campo-config">
-
-              <label for="select-cantidad">
-                Número de preguntas
-              </label>
-
-              <select id="select-cantidad">
-
-                <option value="10">
-                  10 preguntas
-                </option>
-
-                <option value="20" selected>
-                  20 preguntas
-                </option>
-
-                <option value="50">
-                  50 preguntas
-                </option>
-
-                <option value="100">
-                  100 preguntas
-                </option>
-
-                <option value="300">
-                  300 / Todas
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="campo-config">
-
-              <label for="select-tema">
-                Tema
-              </label>
-
-              <select id="select-tema">
-
-                <option value="todos">
-                  Todos los temas
-                </option>
-
-              </select>
-
-            </div>
-
-
-            <div class="campo-config">
-
-              <label for="select-modo">
-                Modalidad
-              </label>
-
-              <select id="select-modo">
-
-                <option value="estudio">
-                  Modo estudio
-                </option>
-
-                <option value="examen">
-                  Modo examen
-                </option>
-
-              </select>
-
-            </div>
-
-          </div>
-
-
-          <label class="check-mezclar">
-
-            <input
-              type="checkbox"
-              id="mezclar-preguntas"
-              checked
-            >
-
-            <span>
-              Mezclar preguntas aleatoriamente
-            </span>
-
-          </label>
-
-
-          <div
-            id="info-seleccion"
-            class="info-seleccion"
-          >
-          </div>
-
-        </div>
-
-
-        <button
-          id="btn-iniciar"
-          class="boton boton-principal"
-        >
-          Iniciar banco
-        </button>
-
-      </div>
-
-    </section>
-
-<!-- =====================================================
-     EXÁMENES PASADOS
-====================================================== -->
-
-<section
-  id="pantalla-examenes"
-  class="pantalla oculto"
->
-
-  <div class="tarjeta-quiz">
-
-    <div class="teoria-cabecera">
-
-      <span class="progreso-global-etiqueta">
-        BANCO HISTÓRICO BADBEAR.MED
-      </span>
-
-      <h2>
-        Exámenes pasados del curso
-      </h2>
-
-      <p>
-        Preguntas reales del curso, depuradas y corregidas por BADBEAR.MED.
-      </p>
-
-    </div>
-
-<div
-  id="resumen-examenes-pasados"
-  class="info-seleccion"
->
-  <strong id="total-examenes-pasados">0</strong>
-  preguntas depuradas disponibles
-</div>
-
-<div
-  id="estadisticas-examenes"
-  class="info-seleccion"
->
-  <strong>Rendimiento histórico:</strong>
-
-  <span>
-    ✅ Correctas:
-    <strong id="estadisticas-examenes-correctas">0</strong>
-  </span>
-
-  <span>
-    ❌ Incorrectas:
-    <strong id="estadisticas-examenes-incorrectas">0</strong>
-  </span>
-
-  <span>
-    📊 Rendimiento:
-    <strong id="estadisticas-examenes-porcentaje">0%</strong>
-  </span>
-</div>
-
-<div
-  class="filtros-examenes-pasados"
-  id="filtros-examenes-pasados"
->
-
-  <button
-    type="button"
-    class="filtro-examen-activo"
-    id="filtro-examen-todas"
-  >
-    Todas
-  </button>
-
-  <button
-    type="button"
-    id="filtro-examen-repetidas"
-  >
-    🔥 Muy repetidas
-  </button>
-
-  <button
-    type="button"
-    id="filtro-examen-imagen"
-  >
-    🖼️ Con imagen
-  </button>
-
-</div>
-
-<button
-  id="btn-iniciar-examenes"
-  class="boton boton-principal"
-  type="button"
->
-  Iniciar práctica
-</button>
-
-<button
-  id="btn-examenes-falladas"
-  class="boton boton-secundario"
-  type="button"
->
-  Practicar preguntas falladas
-</button>
-
-  </div>
-
-</section>
-
-    <!-- =====================================================
-         QUIZ
-    ====================================================== -->
-
-    <section
-      id="pantalla-quiz"
-      class="pantalla quiz oculto"
-    >
-
-      <div class="tarjeta-quiz">
-
-
-        <div class="quiz-superior">
-
-          <div class="quiz-info">
-
-            <span
-              id="tema-pregunta"
-              class="tema-pregunta"
-            >
-              Tema
-            </span>
-
-            <span
-              id="dificultad-pregunta"
-              class="dificultad-pregunta"
-            >
-              Dificultad
-            </span>
-
-            <span
-              id="modo-pregunta"
-              class="modo-pregunta"
-            >
-              Estudio
-            </span>
-
-          </div>
-
-
-          <div
-            id="contador-pregunta"
-            class="contador-pregunta"
-          >
-            Pregunta 1 / 20
-          </div>
-
-        </div>
-
-
-
-       <div class="progreso-contenedor">
-
-  <div class="progreso-datos">
-
-    <span>
-      Avance:
-      <strong id="porcentaje-avance">0%</strong>
-    </span>
-
-    <span>
-      Nota:
-      <strong id="nota-vigesimal">— / 20</strong>
-    </span>
-
-  </div>
-
-  <div class="barra-progreso">
-
-    <div
-      id="progreso"
-      class="progreso"
-    >
-    </div>
-
-  </div>
-
-</div>
-
-
-
-        <div class="marcador">
-
-          <span>
-            Correctas:
-            <strong id="contador-correctas">
-              0
-            </strong>
-          </span>
-
-          <span>
-            Incorrectas:
-            <strong id="contador-incorrectas">
-              0
-            </strong>
-          </span>
-
-        </div>
-
-
-
-        <h2
-          id="texto-pregunta"
-          class="texto-pregunta"
-        >
-          Aquí aparecerá la pregunta.
-        </h2>
-
-<div
-  id="contenedor-imagen-pregunta"
-  class="contenedor-imagen-pregunta oculto"
->
-  <img
-    id="imagen-pregunta"
-    class="imagen-pregunta"
-    src=""
-    alt="Imagen clínica de la pregunta"
-    draggable="false"
-  >
-</div>
-
-        <div
-          id="opciones"
-          class="opciones"
-        >
-        </div>
-
-
-
-        <button
-          id="btn-responder"
-          class="boton boton-responder"
-        >
-          Responder
-        </button>
-
-
-
-        <!-- RESULTADO -->
-
-        <div
-          id="resultado"
-          class="resultado oculto"
-        >
-
-          <div
-            id="estado-respuesta"
-            class="estado-respuesta"
-          >
-          </div>
-
-
-          <div
-            id="respuesta-correcta"
-            class="respuesta-correcta oculto"
-          >
-          </div>
-
-
-          <div
-            id="bloque-explicacion"
-            class="bloque-explicacion"
-          >
-
-            <h3>
-              Explicación
-            </h3>
-
-            <p id="explicacion">
-            </p>
-
-          </div>
-
-
-          <div
-            id="bloque-fija"
-            class="badbear-fija"
-          >
-
-            <h3>
-              BADBEAR.MED FIJA:
-            </h3>
-
-            <p id="texto-fija">
-            </p>
-
-          </div>
-
-
-          <button
-            id="btn-siguiente"
-            class="boton boton-siguiente"
-          >
-            Siguiente pregunta
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-<!-- =====================================================
-     TEORÍA
-====================================================== -->
-
-<section
-  id="pantalla-teoria"
-  class="pantalla teoria oculto"
->
-
-  <div class="tarjeta-teoria">
-
-    <div class="teoria-cabecera">
-
-      <span class="progreso-global-etiqueta">
-        BIBLIOTECA BADBEAR.MED
-      </span>
-
-      <h2>
-        Cirugía Pediátrica
-      </h2>
-
-      <p>
-        Selecciona un tema para ir directamente a la teoría.
-      </p>
-
-    </div>
-
-
-    <div class="biblioteca-layout">
-
-
-      <!-- =========================
-           ÍNDICE LATERAL
-      ========================== -->
-
-      <aside class="indice-teoria">
-
-        <h3>
-          Índice
-        </h3>
-
-
-        <button class="indice-tema" data-page="3">
-          Atresia esofágica y FTE
-        </button>
-
-
-        <button class="indice-tema" data-page="9">
-          Atresia duodenal
-        </button>
-
-
-        <button class="indice-tema" data-page="20">
-          Atresia yeyunoileal
-        </button>
-
-
-        <button class="indice-tema" data-page="34">
-          Malformaciones anorrectales
-        </button>
-
-
-        <button class="indice-tema" data-page="50">
-          Estenosis hipertrófica del píloro
-        </button>
-
-
-        <button class="indice-tema" data-page="65">
-          Invaginación intestinal
-        </button>
-
-
-        <button class="indice-tema" data-page="84">
-          Ónfalocele
-        </button>
-
-
-        <button class="indice-tema" data-page="100">
-          Gastrosquisis
-        </button>
-
-
-        <button class="indice-tema" data-page="131">
-          Hernia inguinal e hidrocele
-        </button>
-
-
-        <button class="indice-tema" data-page="149">
-          Hernia umbilical
-        </button>
-
-
-        <button class="indice-tema" data-page="161">
-          Hernia diafragmática congénita
-        </button>
-
-
-        <button class="indice-tema" data-page="178">
-          Accidentes y heridas
-        </button>
-
-
-        <button class="indice-tema" data-page="180">
-          Quemaduras
-        </button>
-
-
-        <button class="indice-tema" data-page="182">
-          Traumatismo encéfalo-craneano
-        </button>
-
-
-        <button class="indice-tema" data-page="183">
-          Cuerpos extraños
-        </button>
-
-
-        <button class="indice-tema" data-page="185">
-          Apendicitis aguda
-        </button>
-
-
-        <button class="indice-tema" data-page="188">
-          Trauma abdominal
-        </button>
-
-
-        <button class="indice-tema" data-page="189">
-          Divertículo de Meckel
-        </button>
-
-      </aside>
-
-
-
-      <!-- =========================
-           VISOR DEL PDF
-      ========================== -->
-
-      <div class="visor-pdf">
-
-        <div class="lector-teoria">
-
-  <!-- ==========================================
-       CONTROLES DEL LECTOR
-  =========================================== -->
-
-  <div class="lector-controles">
-
-    <button
-      id="btn-pagina-anterior"
-      class="lector-boton"
-      type="button"
-    >
-      ← Anterior
-    </button>
-
-
-    <div class="lector-paginacion">
-
-      Página
-
-      <strong id="pagina-actual">
-        1
-      </strong>
-
-      de
-
-      <strong id="total-paginas-teoria">
-        300
-      </strong>
-
-    </div>
-
-
-    <button
-      id="btn-pagina-siguiente"
-      class="lector-boton"
-      type="button"
-    >
-      Siguiente →
-    </button>
-
-  </div>
-
-
-
-  <!-- ==========================================
-       VISOR
-  =========================================== -->
-
-  <div class="visor-imagen-teoria">
-
-
-    <!-- MARCAS DE AGUA -->
-
-    <div
-      class="marcas-agua-pdf"
-      aria-hidden="true"
-    >
-
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-      <span>BADBEAR.MED</span>
-
-    </div>
-
-
-    <!-- PÁGINA DEL LIBRO -->
-
-    <img
-      id="pagina-teoria"
-      src="assets/teoria/pagina-001.webp"
-      alt="Página 1 de Cirugía Pediátrica"
-      draggable="false"
-    >
-
-  </div>
-
-</div>
-
-
-        <iframe
-          id="visor-teoria"
-          src="assets/docs/cirugia-pediatrica.pdf"
-          title="Teoría de Cirugía Pediátrica"
-        >
-        </iframe>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-    <!-- =====================================================
-         RESULTADO FINAL
-    ====================================================== -->
-
-    <section
-      id="pantalla-final"
-      class="pantalla final oculto"
-    >
-
-      <div class="tarjeta-final">
-
-        <p class="etiqueta-superior">
-          RESULTADO FINAL
-        </p>
-
-<h2 id="titulo-resultado-final">
-  Banco completado
-</h2>
-
-
-        <div class="resultado-principal">
-
-          <span
-            id="puntaje-final"
-            class="puntaje-final"
-          >
-            0 / 0
-          </span>
-
-          <span
-            id="porcentaje-final"
-            class="porcentaje-final"
-          >
-            0%
-          </span>
-
-        </div>
-
-
-        <div class="resumen-final">
-
-          <div class="resultado-dato">
-
-            <span class="resultado-titulo">
-              Correctas
-            </span>
-
-            <strong id="final-correctas">
-              0
-            </strong>
-
-          </div>
-
-
-          <div class="resultado-dato">
-
-            <span class="resultado-titulo">
-              Incorrectas
-            </span>
-
-            <strong id="final-incorrectas">
-              0
-            </strong>
-
-          </div>
-
-
-          <div class="resultado-dato">
-
-            <span class="resultado-titulo">
-              Total
-            </span>
-
-            <strong id="final-total">
-              0
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <p
-          id="mensaje-final"
-          class="mensaje-final"
-        >
-        </p>
-
-
-
-        <div class="acciones-finales">
-
-          <button
-            id="btn-revisar"
-            class="boton boton-secundario oculto"
-          >
-            Revisar errores
-          </button>
-
-          <button
-            id="btn-reiniciar"
-            class="boton boton-principal"
-          >
-            Volver a practicar
-          </button>
-
-        </div>
-
-
-
-        <div
-          id="revision-errores"
-          class="revision-errores oculto"
-        >
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <footer class="footer">
-
-      <p>
-        BADBEAR.MED · Cirugía Pediátrica
-      </p>
-
-    </footer>
-
+      <button class="ingresar" id="btn-ingresar" type="submit">Ingresar</button>
+      <p class="error" id="mensaje-error" aria-live="polite"></p>
+    </form>
+
+    <p class="pie">BADBEAR.MED · Proyecto del grupo WAJOMEA</p>
   </main>
 
+  <script>
+    (() => {
+      const ACCESS_KEY = "badbear_med_cx_access_v1";
+      const TARGET = "curso-cx-bbmed-8f4c2.html";
+      const EXPECTED_HASH = "b45bcabfa9d996115a02b549dbdc9a8d99546c4c1a345397a754c5ebd55eacd7";
 
+      if (sessionStorage.getItem(ACCESS_KEY) === "ok") {
+        location.replace(TARGET);
+        return;
+      }
 
-<script src="js/questions.js"></script>
-<script src="js/examenes-pasados.js"></script>
-<script src="js/app.js?v=300"></script>
+      const form = document.getElementById("form-acceso");
+      const input = document.getElementById("clave");
+      const error = document.getElementById("mensaje-error");
+      const button = document.getElementById("btn-ingresar");
+      const toggle = document.getElementById("ver-clave");
 
+      toggle.addEventListener("click", () => {
+        input.type = input.type === "password" ? "text" : "password";
+      });
+
+      async function sha256(text) {
+        const data = new TextEncoder().encode(text);
+        const digest = await crypto.subtle.digest("SHA-256", data);
+        return Array.from(new Uint8Array(digest))
+          .map(byte => byte.toString(16).padStart(2, "0"))
+          .join("");
+      }
+
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        error.textContent = "";
+        button.disabled = true;
+        button.textContent = "Verificando…";
+
+        try {
+          const hash = await sha256(input.value.trim());
+          if (hash === EXPECTED_HASH) {
+            sessionStorage.setItem(ACCESS_KEY, "ok");
+            location.replace(TARGET);
+            return;
+          }
+
+          error.textContent = "Clave incorrecta. Inténtalo nuevamente.";
+          input.select();
+        } catch (e) {
+          error.textContent = "No se pudo verificar la clave. Recarga la página.";
+        } finally {
+          button.disabled = false;
+          button.textContent = "Ingresar";
+        }
+      });
+    })();
+  </script>
 </body>
-
 </html>
