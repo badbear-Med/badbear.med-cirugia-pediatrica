@@ -23,6 +23,18 @@
   }
 
   // ==========================================================
+  // MARCAS DE AGUA GRANDES
+  // ==========================================================
+
+  if (!document.getElementById("badbear-watermark")) {
+    const watermark = document.createElement("link");
+    watermark.id = "badbear-watermark";
+    watermark.rel = "stylesheet";
+    watermark.href = "css/watermark-badbear.css?v=20260913-1";
+    document.head.appendChild(watermark);
+  }
+
+  // ==========================================================
   // APLICACIÓN PRINCIPAL
   // ==========================================================
 
