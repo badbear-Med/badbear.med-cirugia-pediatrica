@@ -1,0 +1,365 @@
+/* ============================================================
+   BADBEAR.MED - TEMA DE COLOR 2026
+   Azul/celeste/rosado de marca + rojo/naranja/amarillo/verde
+============================================================ */
+
+:root {
+  --bb-navy: #0d1b3e;
+  --bb-blue: #2962ff;
+  --bb-sky: #65d6ff;
+  --bb-pink: #ff5fa2;
+  --bb-red: #e53935;
+  --bb-orange: #ff7a00;
+  --bb-yellow: #ffc933;
+  --bb-green: #21b66f;
+  --bb-soft-blue: #eef4ff;
+  --bb-soft-green: #effcf6;
+  --bb-soft-orange: #fff6ea;
+  --bb-soft-yellow: #fffbea;
+  --bb-soft-red: #fff1f0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 6%, rgba(229,57,53,.07), transparent 22%),
+    radial-gradient(circle at 28% 98%, rgba(255,122,0,.08), transparent 24%),
+    radial-gradient(circle at 50% 3%, rgba(255,201,51,.08), transparent 20%),
+    radial-gradient(circle at 82% 7%, rgba(33,182,111,.07), transparent 22%),
+    radial-gradient(circle at 96% 88%, rgba(41,98,255,.08), transparent 26%),
+    #f5f7fb;
+}
+
+/* Cabecera */
+.header {
+  border-bottom: 1px solid rgba(41,98,255,.12);
+  box-shadow: 0 5px 20px rgba(13,27,62,.06);
+}
+
+.marca-texto h1 span {
+  background: linear-gradient(90deg, var(--bb-blue), var(--bb-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-badbear {
+  filter: drop-shadow(0 8px 14px rgba(41,98,255,.13));
+}
+
+.nav-item {
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav-item:hover {
+  color: var(--bb-orange);
+  background: rgba(255,122,0,.08);
+}
+
+.nav-item.activo {
+  color: var(--bb-blue);
+  background: linear-gradient(135deg, rgba(41,98,255,.10), rgba(255,95,162,.09));
+}
+
+.nav-item.activo::after {
+  left: 18%;
+  right: 18%;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--bb-red),
+    var(--bb-orange),
+    var(--bb-yellow),
+    var(--bb-green),
+    var(--bb-blue),
+    var(--bb-pink)
+  );
+}
+
+.nav-total {
+  background: linear-gradient(135deg, var(--bb-navy), var(--bb-blue));
+  box-shadow: 0 8px 18px rgba(41,98,255,.18);
+}
+
+/* Tarjetas */
+.tarjeta-inicio,
+.tarjeta-quiz,
+.tarjeta-final,
+.progreso-global,
+.estadisticas-temas,
+.tarjeta-teoria {
+  border-color: rgba(41,98,255,.12);
+  box-shadow: 0 14px 38px rgba(13,27,62,.07);
+}
+
+/* Marca de agua: más grande */
+.tarjeta-inicio::before,
+.tarjeta-quiz::before,
+.tarjeta-final::before {
+  width: 520px;
+  height: 520px;
+  opacity: .095;
+}
+
+@media (max-width: 600px) {
+  .tarjeta-inicio::before,
+  .tarjeta-quiz::before,
+  .tarjeta-final::before {
+    width: 330px;
+    height: 330px;
+    opacity: .085;
+  }
+}
+
+/* Encabezados y etiquetas */
+.etiqueta-superior,
+.progreso-global-etiqueta {
+  color: var(--bb-blue);
+}
+
+.tarjeta-inicio h2,
+.teoria-cabecera h2,
+.tarjeta-final h2 {
+  color: var(--bb-navy);
+}
+
+/* Tres datos principales con identidad de color */
+.dato {
+  background: #fff;
+  box-shadow: 0 5px 14px rgba(13,27,62,.035);
+}
+
+.dato:nth-child(1) {
+  border-top: 4px solid var(--bb-blue);
+  background: linear-gradient(180deg, var(--bb-soft-blue), #fff 72%);
+}
+
+.dato:nth-child(2) {
+  border-top: 4px solid var(--bb-green);
+  background: linear-gradient(180deg, var(--bb-soft-green), #fff 72%);
+}
+
+.dato:nth-child(3) {
+  border-top: 4px solid var(--bb-orange);
+  background: linear-gradient(180deg, var(--bb-soft-orange), #fff 72%);
+}
+
+/* Botones */
+.boton-principal,
+.boton-responder {
+  background: linear-gradient(135deg, var(--bb-navy), var(--bb-blue));
+  box-shadow: 0 10px 22px rgba(41,98,255,.18);
+}
+
+.boton-principal:hover,
+.boton-responder:hover {
+  background: linear-gradient(135deg, var(--bb-blue), var(--bb-green));
+}
+
+.boton-siguiente {
+  background: linear-gradient(135deg, var(--bb-green), #15915a);
+  box-shadow: 0 10px 20px rgba(33,182,111,.17);
+}
+
+.boton-siguiente:hover {
+  background: linear-gradient(135deg, #15915a, var(--bb-blue));
+}
+
+.boton-falladas {
+  background: linear-gradient(135deg, var(--bb-soft-orange), var(--bb-soft-red));
+  color: #a62a20;
+  border-color: rgba(229,57,53,.22);
+}
+
+.boton-falladas:hover {
+  background: linear-gradient(135deg, #ffe7cb, #ffe0dd);
+}
+
+/* Filtros de exámenes pasados */
+.filtros-examenes-pasados button:hover {
+  border-color: var(--bb-orange);
+  color: var(--bb-orange);
+  background: rgba(255,122,0,.07);
+}
+
+#filtro-examen-todas.filtro-examen-activo {
+  background: var(--bb-blue);
+  border-color: var(--bb-blue);
+  color: #fff;
+}
+
+#filtro-examen-repetidas.filtro-examen-activo {
+  background: linear-gradient(135deg, var(--bb-orange), var(--bb-red));
+  border-color: var(--bb-orange);
+  color: #fff;
+}
+
+#filtro-examen-imagen.filtro-examen-activo {
+  background: linear-gradient(135deg, var(--bb-green), #138950);
+  border-color: var(--bb-green);
+  color: #fff;
+}
+
+/* Estadísticas de exámenes pasados */
+#estadisticas-examenes span:nth-of-type(1) {
+  background: linear-gradient(180deg, var(--bb-soft-green), #fff);
+  border-color: rgba(33,182,111,.20);
+}
+
+#estadisticas-examenes span:nth-of-type(1) strong {
+  color: var(--bb-green);
+}
+
+#estadisticas-examenes span:nth-of-type(2) {
+  background: linear-gradient(180deg, var(--bb-soft-red), #fff);
+  border-color: rgba(229,57,53,.19);
+}
+
+#estadisticas-examenes span:nth-of-type(2) strong {
+  color: var(--bb-red);
+}
+
+#estadisticas-examenes span:nth-of-type(3) {
+  background: linear-gradient(180deg, var(--bb-soft-orange), #fff);
+  border-color: rgba(255,122,0,.19);
+}
+
+#estadisticas-examenes span:nth-of-type(3) strong {
+  color: var(--bb-orange);
+}
+
+/* Progreso global con 5 colores */
+.progreso-global-grid .estadistica-global:nth-child(1) {
+  border-top: 4px solid var(--bb-blue);
+  background: linear-gradient(180deg, var(--bb-soft-blue), #fff);
+}
+
+.progreso-global-grid .estadistica-global:nth-child(2) {
+  border-top: 4px solid var(--bb-green);
+  background: linear-gradient(180deg, var(--bb-soft-green), #fff);
+}
+
+.progreso-global-grid .estadistica-global:nth-child(3) {
+  border-top: 4px solid var(--bb-orange);
+  background: linear-gradient(180deg, var(--bb-soft-orange), #fff);
+}
+
+.progreso-global-grid .estadistica-global:nth-child(4) {
+  border-top: 4px solid var(--bb-yellow);
+  background: linear-gradient(180deg, var(--bb-soft-yellow), #fff);
+}
+
+.progreso-global-grid .estadistica-global:nth-child(5) {
+  border-top: 4px solid var(--bb-red);
+  background: linear-gradient(180deg, var(--bb-soft-red), #fff);
+}
+
+/* Barra de avance */
+.progreso {
+  background: linear-gradient(90deg,
+    var(--bb-green) 0%,
+    var(--bb-yellow) 35%,
+    var(--bb-orange) 58%,
+    var(--bb-blue) 82%,
+    var(--bb-pink) 100%
+  );
+}
+
+.tema-barra-progreso {
+  background: linear-gradient(90deg, var(--bb-green), var(--bb-yellow), var(--bb-orange));
+}
+
+/* Preguntas y respuestas */
+.tema-pregunta {
+  background: var(--bb-soft-blue);
+  color: var(--bb-blue);
+  border: 1px solid rgba(41,98,255,.14);
+}
+
+.dificultad-pregunta {
+  background: var(--bb-soft-orange);
+  color: #a64b00;
+  border: 1px solid rgba(255,122,0,.15);
+}
+
+.modo-pregunta {
+  background: var(--bb-soft-green);
+  color: #087847;
+  border: 1px solid rgba(33,182,111,.15);
+}
+
+.opcion:hover {
+  border-color: var(--bb-orange);
+  background: #fffaf4;
+}
+
+.opcion.seleccionada {
+  border-color: var(--bb-blue);
+  background: linear-gradient(90deg, rgba(41,98,255,.07), rgba(101,214,255,.07));
+}
+
+.opcion.correcta {
+  border-color: var(--bb-green);
+  background: var(--bb-soft-green);
+  color: #087847;
+}
+
+.opcion.incorrecta {
+  border-color: var(--bb-red);
+  background: var(--bb-soft-red);
+  color: #a62924;
+}
+
+/* BADBEAR.MED FIJA */
+.badbear-fija,
+.revision-fija {
+  background: linear-gradient(135deg, #fffceb, #fff3d3);
+  border-color: rgba(255,201,51,.55);
+}
+
+.badbear-fija h3 {
+  color: #a95a00;
+}
+
+/* Estados por tema */
+.estado-dominado {
+  background: var(--bb-soft-green);
+  color: #087847;
+}
+
+.estado-progreso {
+  background: var(--bb-soft-yellow);
+  color: #9b5c00;
+}
+
+.estado-reforzar {
+  background: var(--bb-soft-red);
+  color: #a62924;
+}
+
+/* Teoría */
+.lector-controles {
+  background: linear-gradient(100deg, var(--bb-navy), #172f66, var(--bb-blue));
+}
+
+.lector-boton {
+  background: linear-gradient(135deg, var(--bb-orange), var(--bb-red));
+}
+
+.lector-boton:hover {
+  background: linear-gradient(135deg, var(--bb-red), var(--bb-blue));
+}
+
+.indice-tema:hover {
+  background: var(--bb-soft-orange);
+  color: var(--bb-orange);
+}
+
+.indice-tema.activo {
+  background: linear-gradient(135deg, var(--bb-blue), var(--bb-green));
+  border-color: transparent;
+}
+
+/* Imágenes clínicas */
+.imagen-pregunta {
+  border: 3px solid rgba(41,98,255,.10);
+  box-shadow: 0 12px 28px rgba(13,27,62,.10);
+}
