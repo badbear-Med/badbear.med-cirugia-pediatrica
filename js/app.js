@@ -10,6 +10,22 @@
     return;
   }
 
+  // ==========================================================
+  // TEMA VISUAL BADBEAR.MED
+  // ==========================================================
+
+  if (!document.getElementById("badbear-theme")) {
+    const theme = document.createElement("link");
+    theme.id = "badbear-theme";
+    theme.rel = "stylesheet";
+    theme.href = "css/theme-badbear.css?v=20260913-2";
+    document.head.appendChild(theme);
+  }
+
+  // ==========================================================
+  // APLICACIÓN PRINCIPAL
+  // ==========================================================
+
   const script = document.createElement("script");
   script.src = "js/app-core.js?v=20260913";
   script.async = false;
